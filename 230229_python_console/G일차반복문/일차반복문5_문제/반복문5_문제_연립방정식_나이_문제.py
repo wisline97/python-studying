@@ -6,3 +6,13 @@
 		3
 '''
 
+chulsu = 13
+father = 45
+year = 0
+
+while True:
+	if (father+year) == (chulsu+year)*3:
+		break
+	year += 1
+
+print(year,"년 후")

@@ -5,3 +5,10 @@
 	[정답]
 		149
 '''
+count = 0
+for i in range(1,10001):
+	if 745%i == 0:
+		count += 1
+	if count == 3:
+		print(i)
+		break

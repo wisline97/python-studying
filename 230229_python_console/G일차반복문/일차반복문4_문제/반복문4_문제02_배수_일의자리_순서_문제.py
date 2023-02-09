@@ -5,3 +5,14 @@
 	[정답]
  		36
 '''
+
+count = 0
+
+for i in range(1,1000):
+	if i%9 == 0:
+		if i%10 == 6:
+			count += 1
+
+	if count == 1:
+		print(i)
+		break

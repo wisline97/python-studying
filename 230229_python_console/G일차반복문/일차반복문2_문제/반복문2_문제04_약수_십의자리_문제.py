@@ -5,3 +5,8 @@
 	[정답]
 		45
 '''
+
+for i in range(1,181):
+	if 180%i==0:
+		if i//10 == 4:
+			print(i)

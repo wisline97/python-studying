@@ -9,3 +9,15 @@
 		total = 10512
 		count = 6
 '''
+
+count = 0
+total = 0
+for i in range(1000,2001):
+	if i%16 == 0:
+		if (i%1000)// 100 == 7:
+			print(i)
+			count += 1
+			total += i
+
+print("합",total)
+print("수",count)

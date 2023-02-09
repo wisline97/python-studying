@@ -9,3 +9,14 @@
 		total = 2277
 		count = 11	
 '''
+count = 0
+total = 0
+for i in range(100,301):
+	if i%9 == 0:
+		if i % 2 == 1:
+			print(i)
+			count += 1
+			total += i
+
+print("합",total)
+print("수",count)

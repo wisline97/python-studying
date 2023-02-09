@@ -9,3 +9,13 @@
         total = 40
         count = 1
 '''
+count = 0
+total = 0
+for i in range(1,201):
+	if 200%i == 0:
+		if (i%100)//10 == 4:
+			count += 1
+			total += i
+
+print(total)
+print(count)

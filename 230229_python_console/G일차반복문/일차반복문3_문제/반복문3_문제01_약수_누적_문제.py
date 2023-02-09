@@ -9,3 +9,13 @@
 		total = 72
 		count = 8
 '''
+
+count = 0
+total = 0
+for i in range(1,31):
+	if 30%i == 0:
+		count += 1
+		total += i
+
+print(total)
+print(count)

@@ -6,3 +6,12 @@
 	[정답] 
 		119
 '''
+
+count = 0
+
+for i in range(100,1000):
+	if i%7 == 0:
+		count += 1
+	if count == 3:
+		print(i)
+		break

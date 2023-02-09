@@ -9,20 +9,13 @@
         total = 4
         count = 1    
 '''
-
-num = 80
-
-total = 0
 count = 0
+total = 0
+for i in range(1,81):
+	if 80%i == 0:
+		if (i%10) == 4:
+			count += 1
+			total += i
 
-i = 1
-while i <= num:
-    if num % i == 0 and i % 10 == 4:
-        print(i, end=" ")
-        total += i
-        count += 1
-    i += 1
-
-print()
-print("total =", total)
-print("count =", count)
+print(total)
+print(count)

@@ -5,3 +5,9 @@
  	[정답]
 		102
 '''
+count = 0
+for i in range(1,10001):
+	if i%6 == 0:
+		if (i%1000) // 100 == 1:
+			print(i)
+			break

@@ -9,3 +9,7 @@
 		9
 		18
 '''
+
+for i in range(1,19):
+	if 18%i == 0:
+		print(i)

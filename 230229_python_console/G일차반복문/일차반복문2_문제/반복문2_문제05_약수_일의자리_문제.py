@@ -6,3 +6,8 @@
 		4
 		24
 '''
+
+for i in range(1,121):
+	if 120%i == 0:
+		if i%10 == 4:
+			print(i)

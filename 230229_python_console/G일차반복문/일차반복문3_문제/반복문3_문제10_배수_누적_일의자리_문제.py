@@ -9,3 +9,14 @@
         total = 588
         count = 4
 '''
+count = 0
+total = 0
+for i in range(100,201):
+	if i%6 == 0:
+		if (i%10) == 2:
+			print(i)
+			count += 1
+			total += i
+
+print("합",total)
+print("수",count)

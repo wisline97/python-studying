@@ -8,3 +8,13 @@
 		total = 26
 		count = 3
 '''
+count = 0
+total = 0
+for i in range(1,19):
+	if 18%i == 0:
+		if i%2 == 0:
+			count += 1
+			total += i
+
+print(total)
+print(count)

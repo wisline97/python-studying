@@ -9,3 +9,14 @@
         total = 400
         count = 1
 '''
+
+count = 0
+total = 0
+for i in range(1,2001):
+	if 2000%i == 0:
+		if (i%1000)//100 == 4:
+			count += 1
+			total += i
+
+print(total)
+print(count)

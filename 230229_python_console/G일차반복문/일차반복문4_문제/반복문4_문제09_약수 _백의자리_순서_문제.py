@@ -5,3 +5,11 @@
 	[정답]
 		396
 '''
+count = 0
+for i in range(1,10001):
+	if 1980%i == 0:
+		if (i%1000)//100 == 3:
+			count += 1
+	if count == 2:
+		print(i)
+		break

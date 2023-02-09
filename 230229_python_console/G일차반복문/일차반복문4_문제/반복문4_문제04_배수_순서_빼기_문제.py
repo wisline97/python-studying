@@ -11,3 +11,18 @@
         아래 식은 카운트를 한 번만 사용하는 것이 아니라 
         두 번 사용한 경우이다.
 '''
+
+count = 0
+num1 = 0
+num2 = 0
+
+for i in range(1,1000):
+	if i%13 == 0:
+		count += 1
+	if count == 4:
+		num1 = i
+	elif count == 6:
+		num2 = i
+
+print(num2-num1)
+

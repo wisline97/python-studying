@@ -6,3 +6,12 @@
 	[정답]
 		1056 1152 1256 1352 
 '''
+
+count = 0
+for i in range(1000,10001):
+	if i%8 == 0:
+		if (i%100) // 10 == 5:
+			print(i)
+			count += 1
+	if count == 4:
+		break

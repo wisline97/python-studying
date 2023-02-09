@@ -5,3 +5,11 @@
 	[정답]
 		24
 '''
+count = 0
+for i in range(1,10001):
+	if 120%i == 0:
+		if (i%10) == 4:
+			count += 1
+	if count == 2:
+		print(i)
+		break

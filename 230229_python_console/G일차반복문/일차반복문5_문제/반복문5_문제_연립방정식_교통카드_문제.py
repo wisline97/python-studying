@@ -12,3 +12,20 @@
 		카드 = 20
 		현금 = 5
 '''
+
+total_std = 25
+total_pee = 19400
+
+card = 720
+cash = 1000
+
+x = 0
+y = 25
+
+while True:
+	if card*x + cash*y == total_pee:
+		print("카드:",x, "현금:",y)
+		break
+	x += 1
+	y -= 1
+

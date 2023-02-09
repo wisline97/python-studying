@@ -9,3 +9,13 @@
 		total = 5000
 		count = 25
 '''
+count = 0
+total = 0
+for i in range(100,301):
+	if i%8 == 0:
+		print(i)
+		count += 1
+		total += i
+
+print("합",total)
+print("수",count)

@@ -8,4 +8,8 @@
 
 a = [1210,1343,1524,1212,7452]
 
+a_length = len(a)
 
+for i in range(a_length):
+    if (a[i]%1000) // 100 == 2:
+        print(a[i])

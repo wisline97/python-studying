@@ -8,5 +8,12 @@
         100
         80
 '''
-
+import random
 arr = []
+
+for i in range(5):
+    num = random.randint(1,100)
+    arr.append(num)
+    if num > 50:
+        print(num)
+print(arr)

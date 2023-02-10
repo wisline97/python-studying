@@ -22,3 +22,13 @@ b = [5, 3, 1, 7, 3]
 op = [0, 1, 0, 2, 1]
 
 total = []
+
+for i in range(len(op)):
+	if op[i] == 0:
+		total.append(a[i]+b[i])
+	elif op[i] == 1:
+		total.append(a[i]-b[i])
+	else:
+		total.append(a[i]*b[i])
+
+print(total)

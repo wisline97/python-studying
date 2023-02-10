@@ -15,3 +15,22 @@
 			랜덤 ==> 5
 			[출력] 1 + 5 + 3 + 7 + 1 = 17
 '''
+
+import random
+
+랜덤숫자개수 = random.randint(2,5)
+print("랜덤숫자개수:",랜덤숫자개수)
+total = 0
+
+랜덤숫자개수만큼반복 = 0
+
+while 랜덤숫자개수만큼반복 < 랜덤숫자개수:
+	num2 = random.randint(1,9)
+	if num2 % 2 == 1:
+		print(num2,end = "")
+		total += num2
+		if 랜덤숫자개수만큼반복 < 랜덤숫자개수 - 1:
+			print(end=" + ")
+		랜덤숫자개수만큼반복+=1
+
+print(" =", total)

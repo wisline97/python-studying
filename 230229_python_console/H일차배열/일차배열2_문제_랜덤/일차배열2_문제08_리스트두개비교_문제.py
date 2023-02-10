@@ -13,8 +13,22 @@
         다르다    
 '''
 
+import random
+
 a = []
 b = []
 
+for i in range(5):
+    num1 = random.randint(1,100)
+    num2 = random.randint(1,100)
+    a.append(num1)
+    b.append(num2)
+    if num1%2 == 0 and num2%2 == 0:
+        print("짝수")
+    elif num1%2 == 1 and num2%2 == 1:
+        print("홀수")
+    else:
+        print("다르다")
 
-
+print(a)
+print(b)

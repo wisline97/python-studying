@@ -12,8 +12,18 @@
         합 : 160
         개수 : 2
 '''
-
+import random
 a = []
+total = 0
+cnt = 0
 
+for i in range(5):
+    num = random.randint(1,100)
+    a.append(num)
+    if num > 50:
+        print(num)
+        total += num
+        cnt += 1
 
-
+print("합",total)
+print("개수",cnt)

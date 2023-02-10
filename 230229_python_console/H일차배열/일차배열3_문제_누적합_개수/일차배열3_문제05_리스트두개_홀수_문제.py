@@ -11,9 +11,33 @@
         total2 = 195
         195    
 '''
+import random
 
 a = []
 b = []
 
+total1 = 0
+total2 = 0
 
+a_odd_total = 0
 
+for i in range(5):
+    num1 = random.randint(1,100)
+    num2 = random.randint(1,100)
+    a.append(num1)
+    b.append(num2)
+    total1 += num1
+    if num2 % 2 == 1:
+        total2 += num2
+    if num1 % 2 == 1:
+        a_odd_total += num1
+
+print(a, total1)
+print(b, total2)
+
+if total2> a_odd_total:
+    print(total2, "b 배열 홀수값들의 합이 더 크다")
+elif total2 < a_odd_total:
+    print(a_odd_total, "a 배열 홀수값들의 합이 더 크다")
+else:
+    print(total2, a_odd_total)

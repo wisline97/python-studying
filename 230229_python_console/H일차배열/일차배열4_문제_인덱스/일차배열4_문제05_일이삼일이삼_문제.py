@@ -6,13 +6,20 @@
 	[예1] 
 		r = 8
 		arr = [1,2,3,1,2,3,1,2]
-  
 	[예2] 
 		r = 4
 		arr = [1,2,3,1]
 '''
+import random
 
+num = random.randint(2,10)
 arr = []
+cnt = 1
+for i in range(num):
+	if cnt > 3:
+		cnt = 1
+	arr.append(cnt)
+	cnt += 1
 
-
-
+print(num)
+print(arr)

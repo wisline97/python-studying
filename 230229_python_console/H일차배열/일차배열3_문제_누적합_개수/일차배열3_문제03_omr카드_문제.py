@@ -9,12 +9,17 @@
         철수 = [5, 2, 5, 5, 2, 1, 4, 4, 4, 1]
         성적 = 20
 '''
+import random
 
 omr = [4,3,1,5,3,2,1,4,5,3]
 a =[]
+total = 0 
+for i in range(10):
+    num = random.randint(1,5)
+    a.append(num)
+    if num == omr[i]:
+        total += 10
 
-
-
-
-
-
+print("정답",omr)
+print("내 답",a)
+print("점수",total)

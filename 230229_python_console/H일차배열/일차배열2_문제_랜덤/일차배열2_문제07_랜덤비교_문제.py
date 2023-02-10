@@ -15,10 +15,23 @@
         80    
 '''
 
+import random
+
 a = []
 b = []
 
-base = 0
+base = random.randint(1,100)
+print("base -> ", base)
 
+for i in range(20):
+    num1 = random.randint(1,100)
+    num2 = random.randint(1,100)
+    a.append(num1)
+    b.append(num2)
+    if num1 > base:
+        print(num1)
+    if num2 > base:
+        print(num2)
 
-
+print(a)
+print(b)

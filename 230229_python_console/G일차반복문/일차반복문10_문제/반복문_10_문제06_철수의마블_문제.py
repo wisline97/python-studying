@@ -10,3 +10,52 @@
 		함정에 실패하면 뒤로 한 칸 물러나게 된다. 	
 		철수가 게임을 끝날 때까지 철수의 이동 경로를 전부 출력하시오. 	
 '''
+import random
+
+chulsu = 0
+trap = False
+
+print("============================================")
+print("철수의 현재 위치는", chulsu)
+print("============================================")
+while chulsu < 20:
+
+	dice = random.randint(1,6)
+
+	print("주사위를 던집니다!")
+	print(dice, "!")
+	print("============================================")
+
+	# 함정에 빠지지 않았을 때
+	if trap == False:
+		chulsu += dice
+		print(dice,"칸 이동합니다.")
+		print("철수의 현재 위치는", chulsu)
+		print("============================================")
+
+
+	# 함정에서 빠져나오는 조건
+	if trap == True and dice>=4:
+		trap = False
+		chulsu += 1
+		print("함정에서 빠져나왔습니다.")
+		print("1칸 앞으로 이동합니다.")
+		print("철수의 현재 위치는", chulsu)
+		print("============================================")
+	elif trap == True and dice < 4:
+		chulsu -= 1
+		print("함정에서 빠져나오지 못했습니다.")
+		print("1칸 뒤로 이동합니다.")
+		print("철수의 현재 위치는", chulsu)
+		print("============================================")
+
+	# 함정 조건문
+	if chulsu > 0 and chulsu < 21 and chulsu%3 == 0:
+		trap = True
+		print("함정에 빠졌습니다.")
+		print("============================================")
+
+
+print("게임 종료")
+print("철수의 최종 위치는", chulsu)
+

@@ -16,12 +16,24 @@
         y = 4
         x = 5
 '''
-y = 5
 x = 5
+y = 5
+
+# 0 1 2 3 은 북 동 남 서 를 뜻한다.
+# 0,2 북남 1,3 동서
 
 dir = [3, 2, 1, 0, 1]
 speed = [4, 3, 1, 2, 3]
 
+for i in range(len(dir)):
+	if dir[i] == 0:
+		y += speed[i]
+	if dir[i] == 1:
+		x += speed[i]
+	if dir[i] == 2:
+		y -= speed[i]
+	if dir[i] == 3:
+		x -= speed[i]
 
-
+print(x,y)
 

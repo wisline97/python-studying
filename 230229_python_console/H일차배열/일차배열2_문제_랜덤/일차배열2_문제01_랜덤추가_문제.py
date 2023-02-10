@@ -10,5 +10,15 @@
         r = 5
         arr = [5,5,5,5,5]  
 '''
+import random
+
+num = random.randint(1,5)
+print(num)
+
 arr = []
+
+for i in range(num):
+    arr.append(num)
+
+print(arr)
 

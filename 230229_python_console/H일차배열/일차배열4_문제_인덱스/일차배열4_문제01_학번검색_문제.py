@@ -12,9 +12,14 @@
         r = 3
 		1004 , 97
 '''
+import random
+
+num = random.randint(0,4)
+print(num)
 
 numberList = [1001, 1002, 1003, 1004, 1005]
 scoreList =   [87, 11, 45, 98, 23]
 
-
+print(numberList[num])
+print(scoreList[num])
 

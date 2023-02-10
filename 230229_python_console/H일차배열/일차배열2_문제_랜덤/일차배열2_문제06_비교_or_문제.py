@@ -10,4 +10,14 @@
         17
 '''
 
+import random
+
 arr = []
+
+for i in range(20):
+    num = random.randint(1,100)
+    arr.append(num)
+    if num < 30 or (num > 70 and num%4 == 0):
+        print(num)
+
+print(arr)

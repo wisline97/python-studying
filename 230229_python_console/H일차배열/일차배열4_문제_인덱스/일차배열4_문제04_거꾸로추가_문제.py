@@ -9,3 +9,7 @@
 a = [10, 20, 30, 40]
 b = []
 
+for i in reversed(range(0,len(a))):
+	b.append(a[i])
+
+print(b)

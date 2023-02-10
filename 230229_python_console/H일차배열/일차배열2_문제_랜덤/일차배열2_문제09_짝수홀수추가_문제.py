@@ -14,11 +14,33 @@
             arr2 = [5, 4, 8, 9, 7]
 '''
 
+import random
+
 a = []
 b = []
 
 arr1 = []
 arr2 = []
+
+for i in range(5):
+    num1 = random.randint(1,9)
+    num2 = random.randint(1,9)
+    a.append(num1)
+    b.append(num2)
+    if num1 > num2:
+        arr1.append(num1)
+    elif num1 < num2:
+        arr2.append(num2)
+    elif num1 == num2:
+        arr1.append(num1)
+        arr2.append(num2)
+
+
+print(a)
+print(b)
+print(arr1)
+print(arr2)
+
 
 
 

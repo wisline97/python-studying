@@ -12,4 +12,8 @@
 
 a = [510,423,124,512,252,23,312,453,122]
 
+a_length = len(a)
 
+for i in range(a_length):
+    if (a[i]%100) // 10 == 2 or (a[i]%1000) // 100 == 5:
+        print(a[i])

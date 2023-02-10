@@ -8,4 +8,8 @@
 
 a = [10,43,24,12,52]
 
+a_length = len(a)
 
+for i in range(a_length):
+    if a[i]%10 == 2:
+        print(a[i])

@@ -7,5 +7,16 @@
         total = [20, 6, 8, 4, 12]
 '''
 
-arr = []
 total = []
+
+import random
+
+arr = []
+
+for i in range(5):
+    num = random.randint(1,10)
+    arr.append(num)
+    total.append(num*2)
+
+print(arr)
+print(total)

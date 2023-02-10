@@ -14,7 +14,24 @@
 	
 
 '''
+import random
 
 a = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
+start_idx = random.randint(0,9)
+random_cnt = random.randint(1,10)
 
+print(start_idx)
+print(random_cnt)
+
+i = 1
+
+while random_cnt > 0:
+	if start_idx < 0:
+		start_idx = len(a)-1
+	a[start_idx] = i
+	i += 1
+	start_idx -= 1
+	random_cnt -= 1
+
+print(a)

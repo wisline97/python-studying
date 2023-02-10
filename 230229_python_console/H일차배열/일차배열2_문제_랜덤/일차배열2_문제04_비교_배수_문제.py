@@ -6,5 +6,14 @@
         arr = [70, 87, 61, 4, 81]
         70
 '''
+import random
 
 arr = []
+
+for i in range(5):
+    num = random.randint(1,100)
+    arr.append(num)
+    if num%5 == 0:
+        print(num)
+
+print(arr)

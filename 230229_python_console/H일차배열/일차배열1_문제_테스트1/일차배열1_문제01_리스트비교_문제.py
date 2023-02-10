@@ -13,5 +13,12 @@
 a = [10,43,23,12,53]
 b = [54,6,4,12,50]
 
+arr_length = len(a)
 
-
+for i in range(arr_length):
+    if a[i]>b[i]:
+        print(a[i])
+    elif a[i]<b[i]:
+        print(b[i])
+    elif a[i]==b[i]:
+        print(a[i],b[i])

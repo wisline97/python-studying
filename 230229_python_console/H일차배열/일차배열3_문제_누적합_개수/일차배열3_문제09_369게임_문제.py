@@ -8,3 +8,15 @@
 
 a = []
 
+for i in range(50):
+    i+=1
+    i_1 = i % 10
+    i_10 = i // 10
+
+    if i % 2 == 0:
+        if i_1 != 3 and i_1 != 6 and i_1 != 9:
+            if i_10 != 3 and i_10 != 6 and i_10 != 9:
+                a.append(i)
+
+
+print(a)

@@ -10,4 +10,9 @@ b = [54,6,4,12,50]
 
 total = [0,0,0,0,0]
 
+arr_length = len(total)
 
+for i in range(arr_length):
+    total[i] = a[i]+b[i]
+
+print(total)

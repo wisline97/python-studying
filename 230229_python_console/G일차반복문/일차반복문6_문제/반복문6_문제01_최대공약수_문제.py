@@ -4,3 +4,8 @@
 	[정답]
 		15
 '''
+
+for i in reversed(range(1,76)):
+	if 45%i == 0 and 60%i == 0 and 75%i == 0:
+		print(i)
+		break

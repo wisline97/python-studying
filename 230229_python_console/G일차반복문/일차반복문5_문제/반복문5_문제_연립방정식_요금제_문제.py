@@ -8,3 +8,16 @@
 	[정답]
 		4501
 '''
+
+a = 17500
+b = 31000
+
+x = 0
+
+while True:
+	if a+(x*5) > b+(x*2):
+		break
+	else:
+		x += 1
+
+print(x,"초")

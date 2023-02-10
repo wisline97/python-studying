@@ -14,4 +14,17 @@
 			8 4
 			9 4
 '''
+y = 1
+plus = 1
+
+for x in range(0,10):
+	print(x, y, plus)
+	check = False
+
+	if plus < y:
+		plus += 1
+		check = True
+	if check == False and plus <= y:
+		y += 1
+		plus = 1
 

@@ -5,3 +5,7 @@
 	900
 '''
 
+for i in range(1,45*60*75):
+	if i%45 == 0 and i%60 == 0 and i%75 == 0:
+		print(i)
+		break

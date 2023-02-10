@@ -6,3 +6,18 @@
 		예) 19200 ==> 9 하나만 5 이상 ==> 1
 		예) 98436 ==> 9,8,6, 세 개가 5 이상 ==> 3
 '''
+
+import random
+
+num = random.randint(10000,99999)
+print(num)
+
+count = 0
+for i in range(5):
+	unit = num%10
+	if unit >= 5 :
+		count += 1
+
+	num = num // 10
+
+print(count)

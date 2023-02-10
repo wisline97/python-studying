@@ -24,3 +24,13 @@
 		오른발 = 2
 		오른발 = 1
 '''
+
+turn = True
+for i in reversed(range(1,31)):
+	if i != 30 and i%5 == 0:
+		turn = not turn
+	if turn == True:
+		print("왼발 =", i)
+	if turn == False:
+		print("오른발 =", i)
+	

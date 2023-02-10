@@ -14,4 +14,8 @@
 				9 -15
 '''
 
+y = 30
 
+for x in range(0,10):
+	y -= x
+	print(x, y)

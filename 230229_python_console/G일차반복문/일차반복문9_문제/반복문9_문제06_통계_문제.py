@@ -8,3 +8,19 @@
 		5. 전교생(10명)의 총점과 평균을 출력한다.
 		6. 1등의 번호와 점수를 출력한다.
 '''
+import random
+
+total = 0
+
+for i in range(10):
+	score = random.randint(0,100)
+
+	if score >= 60:
+		print(i+1,"번",score,"합격")
+	else:
+		print(i+1,"번",score,"불합격")
+
+	total += score
+
+print("전교생 총점:", total,"점")
+print("전교생 평균:", total/10,"점")

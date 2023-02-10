@@ -8,3 +8,17 @@
 	[정답]
 		11
 '''
+
+total = 20000 - 4200
+
+x = 0
+y = 15
+
+while True:
+	if x+y == 15 and (1000*x) + (y*1200) == total:
+		break
+	else:
+		x+=1
+		y-=1
+
+print("흰우유는",x,"개")

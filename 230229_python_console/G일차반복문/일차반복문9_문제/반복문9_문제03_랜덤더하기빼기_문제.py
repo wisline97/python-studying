@@ -15,6 +15,19 @@
 	
 			3 + 6 - 5 + 3 - 1 이된다. 
 '''
+import random
+r = random.randint(1,9)
+answer = r
+print(r, end="")
+for i in range(4):
+	op = random.randint(0,1)
+	r = random.randint(1,9)
+	if op == 0:
+		print(" + ", end="")
+		answer += r
+	if op == 1:
+		print(" - ", end="")
+		answer -= r
+	print(r, end="")
 
-r = 0
-op = 0
+print(" =",answer)

@@ -8,3 +8,13 @@
 	[정답]
 		2
 '''
+
+철수 = 70
+민수 = 90
+cnt = 0
+for i in range(1,1801):
+	if i%철수 == 0 and i%민수== 0:
+		print(i,"초에 다시 만남")
+		cnt += 1
+
+print(cnt,"회")

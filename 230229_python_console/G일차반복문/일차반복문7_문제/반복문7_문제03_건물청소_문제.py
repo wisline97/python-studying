@@ -10,3 +10,10 @@
 	[정답]
 		3 4 9 10 15 16 21 22 27 28 33 34 39 40 45 46 
 '''
+floor = 50
+i=1
+while i <= 50:
+	answer = i % 6
+	if answer == 3 or answer == 4 :
+		print(i, end=" ")
+	i += 1

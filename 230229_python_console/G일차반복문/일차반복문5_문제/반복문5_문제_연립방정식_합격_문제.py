@@ -8,3 +8,15 @@
 	[정답]
 		94
 '''
+
+score1 = 80
+score2 = 72
+score3 = 0
+
+while True:
+	if (score1+score2+score3)//3 >= 82:
+		break
+	else:
+		score3 += 1
+
+print(score3)

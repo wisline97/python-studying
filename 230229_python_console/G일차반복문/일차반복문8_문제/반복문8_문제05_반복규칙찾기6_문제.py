@@ -14,3 +14,9 @@
 			8 3
 			9 1
 '''
+y = 1
+for x in range(0,10):
+	print(x, y)
+	y += 1
+	if x%3 == 2:
+		y = 1

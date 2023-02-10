@@ -26,3 +26,19 @@
 			30 토
 			31 일
 '''
+
+total = 31
+
+for i in range(1, total + 1):
+	if i % 6 == 1:
+		print(i, "일")
+	if i % 6 == 2:
+		print(i, "화")
+	if i % 6 == 3:
+		print(i, "수")
+	if i % 6 == 4:
+		print(i, "목")
+	if i % 6 == 5:
+		print(i, "금")
+	if i % 6 == 0:
+		print(i, "토")

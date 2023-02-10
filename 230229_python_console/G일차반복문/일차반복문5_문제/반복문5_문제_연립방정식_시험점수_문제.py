@@ -8,3 +8,17 @@
 		4점 문제 = 10
 		5점 문제 = 10
 '''
+total = 20
+score = 90
+
+x = 0
+y = 20
+
+while True:
+	if x+y == 20 and (x*4 + y*5) == 90:
+		break
+
+	x += 1
+	y -= 1
+
+print("4점문제:",x,"5점문제:",y)

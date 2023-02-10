@@ -59,4 +59,14 @@
 		50 66
 '''
 
-    
+floor = 1
+
+for i in range(1,51):
+	if floor%10 == 4:
+		floor += 1
+
+	if floor//10 == 4:
+		floor += 10
+
+	print(i, floor)
+	floor+=1

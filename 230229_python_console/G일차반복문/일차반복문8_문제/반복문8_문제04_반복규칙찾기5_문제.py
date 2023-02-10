@@ -13,3 +13,7 @@
 			8 4
 			9 4
 '''
+y = 0
+for x in range(0,10):
+	print(x, round(y//1))
+	y += 5/10

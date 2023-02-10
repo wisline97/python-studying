@@ -8,3 +8,9 @@
 				3 6 7
 				4 8 9
 '''
+x = 0
+y = 1
+for i in range(0, 5):
+	print(i, x, y)
+	x += 2
+	y += 2

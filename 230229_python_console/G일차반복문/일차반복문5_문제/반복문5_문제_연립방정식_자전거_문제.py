@@ -6,3 +6,16 @@
 	[정답]
 		3.0
 '''
+
+walk = 60/6
+ride = 60/15
+
+x = 0
+
+while True:
+	if (walk*x)-18 == ride*x:
+		break
+	else:
+		x += 1
+
+print(x,"km")

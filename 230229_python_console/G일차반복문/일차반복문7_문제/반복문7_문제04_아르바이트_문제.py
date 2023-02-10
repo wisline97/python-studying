@@ -27,3 +27,24 @@
         28 일
         29 월
 '''
+
+total = 30
+
+for i in range(1,total+1):
+    if i % 3 == 0:
+        continue
+
+    if i%7 == 1:
+        print(i, "월")
+    if i%7 == 2:
+        print(i, "화")
+    if i%7 == 3:
+        print(i, "수")
+    if i%7 == 4:
+        print(i, "목")
+    if i%7 == 5:
+        print(i, "금")
+    if i%7 == 6:
+        print(i, "토")
+    if i%7 == 0:
+        print(i, "일")

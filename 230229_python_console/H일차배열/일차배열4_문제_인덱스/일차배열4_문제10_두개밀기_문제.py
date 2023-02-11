@@ -9,6 +9,23 @@
 a = [1 ,3, 7]
 b = [0, 0, 0, 0, 0, 0]
 
+a_idx = len(a) - 1
+
+cnt = 0
+
+for i in range(len(b)):
+
+   b[i] = a[a_idx]
+   cnt += 1
+
+   print(cnt)
+
+   if cnt >= 2:
+      cnt = 0
+      a_idx -= 1
+   
+
+print(b)
 
 
 

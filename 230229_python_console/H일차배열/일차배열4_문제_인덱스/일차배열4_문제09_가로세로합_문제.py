@@ -16,3 +16,15 @@ a = [1, 2, 3, 4,
 garo = [0, 0, 0]
 sero = [0, 0, 0, 0]
 
+a_idx = 0
+
+for i in range(len(garo)):
+	garo[i] = a[a_idx] + a[a_idx+1] + a[a_idx+2] + a[a_idx+3]
+	a_idx += 4
+
+print(garo)
+
+for i in range(len(sero)):
+	sero[i] = a[i] + a[i+4] + a[i+8]
+
+print(sero)

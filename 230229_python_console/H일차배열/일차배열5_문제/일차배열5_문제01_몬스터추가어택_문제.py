@@ -10,7 +10,33 @@
         또한 공격한 몬스터의 양쪽에게는 1의 대미지를 가하게 된다. 
         
 '''
+import random
 
 monster = [9,7,8,6]
 power = 5
 
+for i in range(5):
+    random_mnstr_idx = random.randint(0,3)
+
+    if monster[random_mnstr_idx] - power > 0:
+        monster[random_mnstr_idx] -= power
+    else:
+        monster[random_mnstr_idx] = 0
+        
+    if random_mnstr_idx - 1 > 0 and random_mnstr_idx + 1 < len(monster):
+        monster[random_mnstr_idx-1] -= 1
+        monster[random_mnstr_idx+1] -= 1
+
+    elif random_mnstr_idx - 1 <= 0:
+        monster[random_mnstr_idx+1] -= 1
+    
+    elif random_mnstr_idx + 1 >= len(monster):
+        monster[random_mnstr_idx-1] -= 1 
+
+    print(random_mnstr_idx,"번째 몬스터 공격")
+
+for i in range(len(monster)):
+    if monster[i] < 0:
+        monster[i] = 0
+
+print(monster)

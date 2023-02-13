@@ -10,6 +10,38 @@
         a = [10,20,30,40,50,54,60]
 
 '''
+import random
 
 a = [10, 20, 30, 40, 50, 60]
 
+num = random.randint(1,70)
+print("랜덤숫자는",num)
+
+a.append(num)
+print(a)
+
+index = 0
+
+check = False
+for i in range(len(a)-1):
+    if num > 60:
+        index = len(a)
+        print("num의 위치는",index)
+        check = True
+        break
+    if a[i] < num and num < a[i+1] or a[i] == num :
+        index = i+1
+        print("num의 위치는",index)
+        check = False
+
+if check == False:
+    a_last_idx = len(a) - 1
+    while a_last_idx > index: 
+        a[a_last_idx] = a[a_last_idx-1] 
+        a_last_idx -= 1
+    check = True
+
+a[index] = num
+
+if check == True:
+    print(a)

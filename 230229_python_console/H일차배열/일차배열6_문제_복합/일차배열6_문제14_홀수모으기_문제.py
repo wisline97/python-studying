@@ -9,6 +9,23 @@
 		홀수는 5, 3 이므로 합치면 53이 된다. 
 		53의 두 배는 106이다. 
 '''
+import random
 
 a = []
 temp = []
+
+for i in range(5):
+	num = random.randint(1,9)
+	a.append(num)
+	if num % 2 == 1:
+		temp.append(str(num))
+
+print(a)
+print(temp)
+
+answer = ""
+
+for i in range(len(temp)):
+	answer += temp[i]
+
+print(answer)

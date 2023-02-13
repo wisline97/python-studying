@@ -21,3 +21,17 @@
 list = [3, 5, 2, 1, 2]
 count = 6
 
+for i in range(len(list)):
+	fill = 5 - list[i]
+	if fill == 0:
+		continue
+	
+	if count - fill > 0:
+		list[i] += fill
+		count -= fill
+	elif count - fill <= 0:
+		list[i] += count
+		count -= count
+	print(fill)
+
+print(list)

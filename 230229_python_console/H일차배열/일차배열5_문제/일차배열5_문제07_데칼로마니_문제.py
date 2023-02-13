@@ -11,3 +11,16 @@
 
 
 a = [1,5,4,4,5,1]
+
+check = False
+a_last_idx = len(a) - 1
+a_len = len(a)
+for i in range(a_len//2):
+	if a[i] == a[a_last_idx]:
+		check = True
+	else:
+		check = False
+		break
+	a_last_idx -= 1
+
+print(check)

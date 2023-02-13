@@ -6,5 +6,16 @@
     [정답]
 
 '''
+import random
 
 a = [10, 20, 30, 40, 50, 60]
+num = random.randint(1,100)
+print(num)
+a_idx = 0
+for i in range(len(a)):
+    if a[a_idx] < num:
+        a.remove(a[a_idx])
+        a_idx -= 1
+    a_idx += 1
+
+print(a)

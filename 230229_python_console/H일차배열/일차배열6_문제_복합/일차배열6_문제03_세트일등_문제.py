@@ -8,3 +8,14 @@
 '''
 a = [1001, 40, 1002, 82, 1003, 65, 1004, 70]
 
+max = 0
+max_num = 0
+
+for i in range(len(a)):
+	if a[i] < 101:
+		if a[i] > max:
+			max = a[i]
+			max_num = a[i-1]
+
+print(max_num)
+print(max)

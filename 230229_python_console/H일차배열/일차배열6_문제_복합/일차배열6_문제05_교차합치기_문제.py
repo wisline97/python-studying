@@ -18,3 +18,9 @@ a = [10,20,30]
 b = [40,50,60]
 
 c = []
+
+for i in range(len(a)):
+	c.append(a[i])
+	c.append(b[i])
+
+print(c)

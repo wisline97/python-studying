@@ -20,7 +20,7 @@ total = 0
 for i in range(len(a)):
 	if i % 3 == 0:
 		total = total + a[i + 1] + a[i + 2]
-avg = total / 3
+avg = total / 6
 print("평균 =", avg)
 
 korMax = 0

@@ -20,6 +20,7 @@ while True:
 
     if a[i] < r:
         a.remove(a[i])
+        print(a)
         i -= 1
     i += 1
 print(a)

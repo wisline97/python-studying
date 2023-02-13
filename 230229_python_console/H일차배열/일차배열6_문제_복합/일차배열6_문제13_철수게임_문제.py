@@ -7,11 +7,13 @@
 		map1의 끝에 도달하면 map2로 이동해서 전진하고, 
 		map2의 끝에 도달하면 다시 map1로 이동해서 전진한다. 		
 		주사위를 총 4번 반복하고 철수의 위치를 출력하시오.
+
 	[예시]
+
 	(1)	시작
 		map1 = [1,0,0,0,0,0,0,0,0,0]
 		map2 = [0,0,0,0,0,0,0,0,0,0]
-  
+	
 	(2)	주사위 3 , 5 : 8
 		map1 = [0,0,0,0,0,0,0,0,1,0]
 		map2 = [0,0,0,0,0,0,0,0,0,0]
@@ -29,6 +31,40 @@
 		map2 = [0,0,0,0,0,0,0,0,0,0]
 			
 '''
+import random
 
 map1 = [1,0,0,0,0,0,0,0,0,0]
 map2 = [0,0,0,0,0,0,0,0,0,0]
+
+turn = True
+size = len(map1)
+position = 0
+
+for i in range(4):
+	dice1 = random.randint(1,6)
+	dice2 = random.randint(1,6)
+	total = dice1 + dice2
+	print("주사위", dice1, dice2, "=", total)
+
+	if turn:
+		map1[position] = 0
+
+	if turn == False:
+		map2[position] = 0
+	
+	print("position =", position, size)
+
+	if position + total >= size:
+		turn = not turn
+
+	if turn:
+		position += total
+		position %= size
+		map1[position] = 1
+	else:
+		position += total
+		position %= size
+		map2[position] = 1
+	
+	print("map1 =", map1, turn)
+	print("map2 =", map2, turn)

@@ -25,8 +25,11 @@ price =[500, 1200, 4300, 2300]
 order = [0, 1, 3, 3, 2, 2, 1]
 count = [3, 2, 2, 1, 3, 4, 3]
 
+todays_sales = 0
 
+for i in range(len(order)):
+	prd_price = price[order[i]]
+	purchase_cnt = count[i] 
+	todays_sales += prd_price*purchase_cnt
 
-
-
-
+print(todays_sales)

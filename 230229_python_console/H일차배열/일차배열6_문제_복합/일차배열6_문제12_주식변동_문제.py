@@ -16,5 +16,17 @@
 		3일 
 '''
 
-a = [3, 1, 2, 7, 2, 3, 4, 6, 1]
+a = [3, 1, 2, 7, 2, 3, 4, 6, 1,2,3]
+count = 0
+max_count = 0
 
+for i in range(len(a)-1):
+	if(a[i] < a[i+1]):
+		count += 1
+		if count > max_count:
+			max_count = count
+	else:
+		count = 0
+
+print(count)
+print(max_count)

@@ -23,6 +23,7 @@
 
 		총 금액 = 12600
 '''
+
 item = [1001, 1002, 1003, 1004]
 price =[500, 1200, 4300, 2300]
 count = [3, 1, 2, 1]
@@ -32,14 +33,13 @@ order = [0, 1, 3, 3, 2, 2, 1]
 total = 0
 
 for i in range(len(order)):
-	if count[order[i]] > 0:
-		count[order[i]] -= 1
-		print(count)
+	prd_idx = order[i]
+	if count[prd_idx] > 0:
+		count[prd_idx] -= 1
+		total += price[prd_idx]
 	else:
-		print("주문불가")
-print(order)
+		print(item[prd_idx],"번 상품","주문불가")
 
-
-
+print(total,"원")
 
 

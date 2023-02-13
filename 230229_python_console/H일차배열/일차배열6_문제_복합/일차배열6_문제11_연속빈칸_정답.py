@@ -15,10 +15,9 @@
 '''
 import random
 
-a = [0,1,0,0,1,0,0,0,0,1]
+a = [0,1,0,1,1,0,0,0,0,1]
 
 size = random.randint(1, 5)
-size = 4
 print("size =", size)
 
 start = 0
@@ -27,6 +26,8 @@ end = 0
 check = False
 count = 0
 for i in range(len(a)):
+	print(start, end, count)
+
 	if a[i] == 0:
 		if start == 0:
 			start = i
@@ -37,11 +38,10 @@ for i in range(len(a)):
 		if count >= size:
 			check = True
 			break
-
 		start = 0
 		count = 0
-	
-	
+
+
 if check == False:
 	print("창고부족")
 else:

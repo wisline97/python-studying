@@ -15,7 +15,20 @@
 정답 = [1,4,3,3,2]
 밀린답 = [0,1,4,3,2]
 
+for i in range(len(밀린답)-1):
+	temp = 밀린답[i]
+	밀린답[i] = 밀린답[i+1]
+	밀린답[i+1] = temp
 
+print(밀린답)
+
+score = 0
+
+for i in range(len(정답)):
+	if 정답[i] == 밀린답[i]:
+		score += 20
+
+print(score,"점")
 
 
 

@@ -32,6 +32,7 @@ if index == -1:
         while i > 0:
             a[i] = a[i - 1]
             i -= 1
+            print(a)
         a[0] = r
     else:
         a.append(r)
@@ -40,6 +41,7 @@ else:
     i = len(a) - 1
     while i > index:
         a[i] = a[i - 1]
+        print(a)
         i -= 1
     a[index] = r
 print(a)

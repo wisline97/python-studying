@@ -49,7 +49,7 @@ for i in range(4):
 	else:
 		map2[position] = 0
 
-	print("position =", position)
+	print("position =", position, size)
 	if position + total >= size:
 		turn = not turn
 

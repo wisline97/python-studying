@@ -13,5 +13,40 @@
 		r = 5
 		"창고부족"
 '''
+import random
 
 a = [0,1,0,0,1,0,0,0,0,1]
+
+size = random.randint(1, 5)
+print(size)
+check = False
+
+start = 0
+end = 0
+
+count = 0
+
+for i in range(len(a)):
+	if a[i] == 0:
+		if start == 0:
+			start = i
+		count += 1
+
+	else:
+		end = i
+		if count >= size:
+			check = True
+			break
+
+		start = 0
+		count = 0
+
+if check == True:
+	print(start, size)
+	for i in range(start, start+size):
+		a[i] = 1
+
+if check == False:
+	print("창고부족")
+
+print(a)

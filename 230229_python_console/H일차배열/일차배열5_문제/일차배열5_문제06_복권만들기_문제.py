@@ -10,6 +10,30 @@
 		[ 1, 7, 7, 1, 1, 7, 1]  "꽝"
 		[ 1, 1, 1, 7, 7, 7, 1]  "당첨"
 '''
+import random
 
+a = [1,7]
 lotto = []
+
+svn_cnt = 0
+one_cnt = 0
+
+for i in range(7):
+	num = random.randint(0,1)
+
+	if num == 0:
+		one_cnt += 1
+		if one_cnt < 5:
+			lotto.append(a[0])
+		else:
+			lotto.append(a[1])
+
+	else:
+		svn_cnt += 1
+		if svn_cnt < 4:
+			lotto.append(a[1])
+		else:
+			lotto.append(a[0])
+
+print(lotto)
 

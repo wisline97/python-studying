@@ -12,6 +12,14 @@
 		14 8 2
 		13 7 1
 '''
+import random
 
+num = random.randint(3,6)
+print(num)
+
+max = num*3
+for i in range(num):
+	print(max, max-num, max-(num*2))
+	max -= 1
 
 

@@ -10,5 +10,32 @@
 		5 4 3
 		6 5 4
 '''
+import random
+
+num = random.randint(3,6)
+print(num)
+max = 3
+i = 1
+
+# 일차반복문
+while True:
+	if max > num:
+		break
+
+	print(max, max-1, max-2)
+	max += 1
+
+print()
 
 
+# 이차반복문
+print(num)
+max = 3
+i = 0
+while True:
+	if max > num:
+		break
+	for y in range(3):
+		print(max-y,end=" ")
+	print()
+	max += 1

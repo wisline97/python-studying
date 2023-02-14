@@ -8,3 +8,32 @@
 a = [0, 0, 1,
      0, 1, 1,
      1, 0, 1]
+
+bingo = 0
+
+# 가로 검사
+i = 0
+while i < len(a)-2:
+    if a[i] == 1 and a[i+1] == 1 and a[i+2] == 1:
+        bingo += 1
+    i += 3
+
+# 세로 검사
+i = 0
+while i < 3:
+    if a[i] == 1 and a[i+3] == 1 and a[i+6] == 1:
+        bingo += 1
+    i += 1
+
+# 대각선 검사
+i = 0
+while i < 3:
+    if i == 0:
+        if a[i] == 1 and a[i+4] == 1 and a[i+8] == 1:
+            bingo += 1
+    if i == 2:
+        if a[i] == 1 and a[i+2] == 1 and a[i+4] == 1:
+            bingo += 1
+    i += 1
+
+print(bingo)

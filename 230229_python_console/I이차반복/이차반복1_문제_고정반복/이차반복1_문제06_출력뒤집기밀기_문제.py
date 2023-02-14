@@ -10,3 +10,30 @@
 		4 3 2
 		3 2 1
 '''
+import random
+
+num = random.randint(3,6)
+print(num)
+max = num
+
+while True:
+	if max-2 < 1:
+		break
+
+	print(max, max-1, max-2)
+	max -= 1
+
+print()
+
+
+# 이차반복문
+print(num)
+max = num
+
+while True:
+	if max-2 < 1:
+		break
+	for y in range(3):
+		print(max-y,end=" ")
+	print()
+	max -= 1

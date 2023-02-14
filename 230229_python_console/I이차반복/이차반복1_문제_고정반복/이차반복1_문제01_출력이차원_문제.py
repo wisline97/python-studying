@@ -12,3 +12,12 @@
 		5 5 5
 		6 6 6
 '''
+import random
+
+num = random.randint(3,6)
+print(num)
+
+for i in range(1, num+1):
+	for y in range(3):
+		print(i, end=" ")
+	print()

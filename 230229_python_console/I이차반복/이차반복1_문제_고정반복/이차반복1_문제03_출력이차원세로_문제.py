@@ -17,3 +17,12 @@
 		1 2 3 
   
 '''
+import random
+
+num = random.randint(3,6)
+print(num)
+
+for i in range(3):
+	for y in range(num):
+		print(y+1, end = " ")
+	print()

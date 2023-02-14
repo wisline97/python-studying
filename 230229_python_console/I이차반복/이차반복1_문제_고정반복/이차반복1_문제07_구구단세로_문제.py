@@ -25,3 +25,10 @@
 		9 X 9 = 81
 '''
 
+min = 2
+max = 9
+
+for i in range(min, max+1):
+	for y in range(1,10):
+		print(i,"X",y,"=",i*y)
+	print()

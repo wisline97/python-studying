@@ -12,5 +12,13 @@
 '''
 a = [10, 20, 30, 40]
 total = []
+for i in range(len(a)):
+	minus = a[i]
+	for y in range(len(a)):
+		if i != y:
+			minus -= a[y]
 
+	total.append(minus)
 
+print(a)
+print(total)

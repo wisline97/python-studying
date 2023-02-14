@@ -8,3 +8,11 @@
 		...      	...				    ...
 		2 * 9 = 18	3 * 9 = 27 	 ...	9 * 9 = 81
 '''
+
+min = 2
+max = 9
+
+for i in range(1,10):
+	for y in range(min, max+1):
+		print(y,"X",i,"=",i*y, end="	")
+	print()

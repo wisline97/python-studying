@@ -14,3 +14,10 @@
 		10 : 4
 '''
 a = [10,30,40,10,20,30,50,10,10]
+
+for i in range(len(a)):
+	count = 1
+	for y in range(len(a)):
+		if i != y and a[i] == a[y]:
+			count += 1
+	print("현재 a 배열에는", a[i],"값이", count,"개 존재합니다.")

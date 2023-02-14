@@ -12,7 +12,24 @@
 		15 14 13
 		18 17 16
 '''
+import random
+
+num = random.randint(3,6)
+print(num)
 
 
+# 1차반복문
+for i in range(1, num+1):
+	max = 3*i
+	print(max,max-1,max-2)
+
+print()
 
 
+# 2차반복문
+for i in range(1, num+1):
+	max = 3*i
+	for y in range(3):
+		print(max, end=" ")
+		max-=1
+	print()

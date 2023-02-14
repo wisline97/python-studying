@@ -9,3 +9,11 @@
 a = [1, 2, 7, 40, 3, 6]
 b = [1, 6, 2, 9, 3, 7]
 c = []
+
+for i in range(len(a)):
+	for y in range(len(b)):
+		if a[i] == b[y]:
+			if b[y] % 2 == 0:
+				c.append(b[y])
+
+print(c)

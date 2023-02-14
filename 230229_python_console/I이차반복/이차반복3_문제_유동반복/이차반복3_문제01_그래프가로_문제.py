@@ -11,4 +11,11 @@
 		0   : 
 		1   : *	
 '''
+import random
 
+for i in range(5):
+	num = random.randint(0,10)
+	print(num," : ", end="")
+	for y in range(num):
+		print("*", end="")
+	print()

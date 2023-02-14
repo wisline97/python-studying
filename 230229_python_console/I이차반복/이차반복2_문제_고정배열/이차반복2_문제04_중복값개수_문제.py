@@ -7,3 +7,18 @@
         [7, 3]
 '''
 
+a = [1, 2, 7, 40, 3, 6]
+b = [1, 2, 7, 3, 7, 6, 2, 2, 3]
+c = []
+
+for i in range(len(a)):
+    check = False
+    count = 0
+    for y in range(len(b)):
+        if a[i] == b[y]:
+            check = True
+            count += 1
+    if check == True and count == 2:
+        c.append(a[i])
+
+print(c)

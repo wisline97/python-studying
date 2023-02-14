@@ -11,3 +11,8 @@
 		7
 '''
 
+max = 7
+for i in reversed(range(1,max+1)):
+	for y in reversed(range(i)):
+		print(max-y, end = " ")
+	print()

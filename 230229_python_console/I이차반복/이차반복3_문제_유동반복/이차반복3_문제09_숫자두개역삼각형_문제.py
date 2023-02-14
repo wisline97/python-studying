@@ -7,3 +7,9 @@
 		1 2 3 4
 		1 2
 '''
+
+for i in reversed(range(1,5)):
+	mult = i*2
+	for y in range(mult):
+		print(y+1,end=" ")
+	print()

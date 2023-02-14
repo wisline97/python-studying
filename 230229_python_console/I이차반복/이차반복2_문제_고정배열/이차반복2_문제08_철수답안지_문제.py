@@ -29,3 +29,14 @@ b = [61, 2, 54, 3, 5, 6]
 정답지 = []
 
 철수 = [67, 13, 2, 22, 65, 4]
+count = 0
+
+for i in range(len(a)):
+	정답지.append(a[i]+b[i])
+
+for i in range(len(철수)):
+	for y in range(len(정답지)):
+		if 철수[i] == 정답지[y]:
+			count += 1
+
+print(count,"개")

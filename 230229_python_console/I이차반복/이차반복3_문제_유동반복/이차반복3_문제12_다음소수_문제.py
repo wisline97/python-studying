@@ -10,3 +10,19 @@
 		r = 500
 	    소수 = 503
 '''
+import random
+
+num = random.randint(2,1000)
+print(num)
+min = num
+check = False
+
+while True:
+	min += 1
+	count = 0
+	for i in range(1, min):
+		if min%i == 0:
+			print(min, i)
+			count += 1
+	if count < 2:
+		break

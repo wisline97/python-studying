@@ -19,3 +19,12 @@ count = [   3,    2,    1,    4,    2,    1]
 
 cancle = [1002, 1003, 1004, 1001, 1001]
 
+for i in range(len(cancle)):
+	cancle_item = cancle[i]
+	for y in range(len(item)):
+		if item[y] == cancle_item:
+			idx = y
+			count[y] -= 1
+	print(item[idx],":",count[idx])
+
+print(count)

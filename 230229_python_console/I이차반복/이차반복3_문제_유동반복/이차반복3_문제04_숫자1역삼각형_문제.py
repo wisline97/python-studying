@@ -8,3 +8,8 @@
 		12
 		1
 '''
+
+for i in reversed(range(1,6)):
+	for y in range(i):
+		print(y+1, end=" ")
+	print()

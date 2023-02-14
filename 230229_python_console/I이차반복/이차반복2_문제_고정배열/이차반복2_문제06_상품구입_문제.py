@@ -21,7 +21,12 @@ count = [   0,    0,    0,    0,    0,    0]
 
 purchase = [1002, 1003, 1004, 1001, 1001]
 
+for i in range(len(purchase)):
+	sold_item = purchase[i]
+	for y in range(len(item)):
+		if item[y] == sold_item:
+			idx = y
+			count[y] += 1
+	print(item[idx],":",count[idx])
 
-
-
- 
+print(count)

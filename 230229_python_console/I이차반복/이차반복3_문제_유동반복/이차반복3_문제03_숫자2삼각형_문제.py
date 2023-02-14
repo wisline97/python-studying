@@ -13,3 +13,13 @@
 		1 2 3 1 2 3 1 2 3
 		1 2 3 1 2 3 1 2 3 1
 '''
+
+for i in range(11):
+	write = 1
+	for y in range(i):
+		if write == 4:
+			write = 1
+		print(write,end=" ")
+		write += 1
+
+	print()

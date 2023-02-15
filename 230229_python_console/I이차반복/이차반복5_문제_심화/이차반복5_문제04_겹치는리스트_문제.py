@@ -12,6 +12,43 @@
 		b =[3,6,5,6] : [1,3,(3,6,5,6),1,8,9] 완벽히 겹친다.
 '''
 a = [1,3,3,6,5,6,1,8,9]
+
 b = [6,1,8]
-# b = [6,3]
-# b = [3,6,5,6]
+
+a_str = ''.join(str(i) for i in a)
+print(a_str)
+
+b_str = ''.join(str(i) for i in b)
+print(b_str)
+
+answer = b_str in a_str
+
+if answer:
+    print("O")
+else:
+    print("X")
+
+b = [6,3]
+
+b_str = ''.join(str(i) for i in b)
+print(b_str)
+
+answer = b_str in a_str
+
+if answer:
+    print("O")
+else:
+    print("X")
+    
+b = [3,6,5,6]
+
+
+b_str = ''.join(str(i) for i in b)
+print(b_str)
+
+answer = b_str in a_str
+
+if answer:
+    print("O")
+else:
+    print("X")

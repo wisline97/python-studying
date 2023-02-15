@@ -6,4 +6,13 @@
 		1 2 3 4 100		
 '''
 a = [1,1,2,2,3,3,4,100,3]
+b = []
 
+for i in range(len(a)):
+	check = True
+	for y in range(len(b)):
+		if a[i] == b[y]:
+			check = False
+	if check == True:
+		print(a[i], end=" ")
+		b.append(a[i])

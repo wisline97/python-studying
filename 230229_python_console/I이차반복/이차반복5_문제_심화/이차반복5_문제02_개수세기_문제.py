@@ -11,3 +11,22 @@ a = [10, 20, 30, 30, 100, 10, 30, 30, 20, 30, 20]
 
 value = []
 count = []
+
+for idx in range(len(a)):
+	check = False
+	for i in range(len(value)):
+		if a[idx] == value[i]:
+			check = True
+
+	if not check:
+		value.append(a[idx])
+
+for idx in range(len(value)):
+	cnt = 0
+	for i in range(len(a)):
+		if value[idx] == a[i]:
+			cnt += 1
+	count.append(cnt)
+
+print(value)
+print(count)

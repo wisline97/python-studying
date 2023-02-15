@@ -15,5 +15,36 @@
 	[정답]
 		b = [32, 0, 0, 0, 0, 0, 0]
 '''
-a = [8,4,2,2,4,4,8]
-b = [0,0,0,0,0,0,0]
+b = [8,4,2,2,4,4,8]
+print(b)   
+
+
+while True:
+	is_consecutive = False
+	# b[i] 와 b[i+1] 값을 항상 비교해야하니까 len(b)에서 1을 빼는 것 
+	for i in range(len(b)-1):
+		if b[i] == b[i+1]:
+			is_consecutive = True
+			total = b[i] + b[i+1]
+			b[i:i+2] = [total]
+			break
+
+	if not is_consecutive:
+		break
+
+print(b)
+
+
+
+""" while True:
+    is_consecutive = False
+    for i in range(len(b)-1):
+        if b[i] == b[i+1]:
+            is_consecutive = True
+            total = b[i] + b[i+1]
+            b[i:i+2] = [total]
+            break
+    print(b)
+    if not is_consecutive:
+        break
+ """

@@ -17,3 +17,9 @@ count = [5,6,1,3]
 
 b = []
 
+for idx in range(len(a)):
+    for numbers in range(count[idx]):
+        b.append(a[idx])
+
+print(b)
+

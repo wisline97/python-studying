@@ -28,7 +28,6 @@ while i < 3:
 		com[i] = r
 	i += 1
 print("com =", com)
-
 while True:
 	i = 0
 	while i < 3:

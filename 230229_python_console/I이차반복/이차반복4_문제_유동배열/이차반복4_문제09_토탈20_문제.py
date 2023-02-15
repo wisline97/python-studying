@@ -7,5 +7,34 @@
 		[3, 10, 7] o 
 		[5, 10, 5] x 
 '''
+import random
 
-a = [0,0,0]
+while True:
+	a = [0,0,0]
+	a_idx = 0
+	total = 0
+
+	while a_idx < 3:
+		check = False
+		num = random.randint(1,10)
+
+		for i in range(len(a)):
+			if a[i] == num:
+				check = True
+
+		if check == False:
+			a[a_idx] = num
+			a_idx += 1
+
+	print()
+	print(a)
+	print()
+
+	for i in range(len(a)):
+		total += a[i]
+
+	print(total)
+
+	if total == 20:
+		print("total값이 20입니다. 게임을 종료합니다.")
+		break

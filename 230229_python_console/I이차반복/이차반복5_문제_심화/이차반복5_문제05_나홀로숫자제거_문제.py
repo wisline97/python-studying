@@ -8,6 +8,41 @@
 '''
 
 a = [1,2,3,2,1]
-# a = [1,3,4,4,2]
-# a = [1,1,1,1,1]
 b =[]
+
+for i in range(len(a)):
+    count = 0
+    for y in range(len(a)):
+        if a[i] == a[y]:
+            count += 1
+    if count > 1:
+            b.append(a[i])
+
+print(b)
+
+
+a = [1,3,4,4,2]
+b =[]
+
+for i in range(len(a)):
+    count = 0
+    for y in range(len(a)):
+        if a[i] == a[y]:
+            count += 1
+    if count > 1:
+            b.append(a[i])
+
+print(b)
+
+a = [1,1,1,1,1]
+b =[]
+
+for i in range(len(a)):
+    count = 0
+    for y in range(len(a)):
+        if a[i] == a[y]:
+            count += 1
+    if count > 1:
+            b.append(a[i])
+            
+print(b)

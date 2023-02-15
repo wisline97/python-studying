@@ -8,5 +8,54 @@
 		
 		계속 반복하면서 strike가 3이 되면 종료한다.
 '''
+import random
+
 com = [0, 0, 0]
-me = [0, 0, 0]
+com_idx = 0
+
+while True:
+	check = False
+	num = random.randint(0,9)
+	for i in range(len(com)):
+		if num == com[i]:
+			check = True
+	if check == False:
+		com[com_idx] = num
+		com_idx += 1
+	
+	if com_idx == 3:
+		break
+
+while True:
+	print()
+	print("Game Start")
+	print()
+	ball = 0
+	strike = 0
+	me = [0, 0, 0]
+	me_idx = 0
+	while me_idx < 3:
+		check = False
+		num = random.randint(0,9)
+		for i in range(len(me)):
+			if num == me[i]:
+				check = True
+		if check == False:
+			me[me_idx] = num
+			me_idx += 1
+	print()
+	print(com)
+	print(me)
+	print()
+	for i in range(len(me)):
+		for y in range(len(me)):
+			if i != y and me[i] == com[y]:
+				ball += 1
+				print(" ball! ",me[i],com[y])
+			if i == y and me[i] == com[y]:
+				print(" strike! ",me[i],i,com[y],y)
+				strike += 1
+	if strike == 3:
+		print("Strike 3!!!!")
+		print("Game Over!!!!")
+		break

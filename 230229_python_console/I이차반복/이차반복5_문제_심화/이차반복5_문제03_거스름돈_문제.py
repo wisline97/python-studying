@@ -14,3 +14,34 @@ money = [50000, 10000, 5000, 1000, 500, 100]
 count = [    1,     1,    1,    1,   5,  10]
 
 charge = 7800
+idx = 0
+
+# charge = charge % money[idx]를 먼저 작성하고
+# count[idx] 값을 조정해서 오류났던거 ^^....
+while charge >= 0:
+    if charge > money[idx]:
+        if count[idx] - (charge//money[idx]) >= 0:
+            print("charge =",charge)
+            print("charge//money[",idx,"] =",charge//money[idx])
+            print("count[",idx,"] =",count[idx])
+            diff = count[idx] - (charge//money[idx])
+            charge = charge % money[idx]
+            count[idx] = diff
+            print("count[",idx,"] =",count[idx])
+            print("charge =",charge)
+        else:
+            print("charge =",charge)
+            print("charge//money[",idx,"] =",charge//money[idx])
+            print("count[",idx,"] =",count[idx])
+            charge -= money[idx] * count[idx]
+            count[idx] = 0
+            idx += 1
+            print("charge =",charge)
+    else:
+        idx += 1
+    print()
+    if charge == 0:
+        break
+
+    
+print(count)

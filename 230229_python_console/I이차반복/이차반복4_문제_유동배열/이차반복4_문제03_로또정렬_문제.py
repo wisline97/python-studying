@@ -6,4 +6,27 @@
 	[예시]
         [40, 38, 27, 26, 18, 5]
 '''
+import random
+
 lotto = []
+count = 0
+
+
+while True:
+	check = False
+	if count == 6:
+		break
+
+	num = random.randint(1,45)
+
+	for i in range(len(lotto)):
+		if lotto[i] == num:
+			check = True
+
+	if check == False:
+		lotto.append(num)
+		count += 1
+	else:
+		continue
+
+print(lotto)

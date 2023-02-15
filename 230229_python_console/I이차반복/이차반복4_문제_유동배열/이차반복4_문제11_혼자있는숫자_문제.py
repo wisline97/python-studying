@@ -6,3 +6,11 @@
 '''
 
 a = [10,20,30,40,40,10,30,10,50]
+
+for i in range(len(a)):
+	count = 0
+	for y in range(len(a)):
+		if a[i] == a[y]:
+			count += 1
+	if count < 2:
+		print(a[i], end=" ")

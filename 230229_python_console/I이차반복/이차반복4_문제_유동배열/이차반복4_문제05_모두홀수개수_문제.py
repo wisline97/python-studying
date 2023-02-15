@@ -10,4 +10,19 @@
 			[5, 2, 1, 4] 모두홀수x => total = [1,2]
 			...
 '''
+import random
+
 total = []
+
+for i in range(5):
+	check = True
+	for y in range(4):
+		num = random.randint(1,9)
+		if num%2 == 0:
+			check = False
+	if check:
+		total.append(1)
+	else:
+		total.append(2)
+
+print(total)

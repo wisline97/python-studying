@@ -19,4 +19,25 @@
       ...
       
   '''
+
+import random
+
 a = [11, 87, 42, 100, 24]
+
+
+while True:
+    check = True
+    num = random.randint(0,4)
+    max = 0
+    for i in range(len(a)):
+        if a[i] > max:
+            max = a[i]
+        if a[i] != 0:
+            check = False
+    if a[num] == max:
+        print(max, a[num])
+        print(a)
+        a[num] = 0
+    
+    if check == True:
+        break

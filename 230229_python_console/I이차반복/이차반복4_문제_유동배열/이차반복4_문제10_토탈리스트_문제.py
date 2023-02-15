@@ -15,4 +15,18 @@
 		8 3 4 9 5  : 29
 		total = [26, 24, 23, 33, 13, 21, 27, 17, 23, 29]
 '''
+import random
+
 total = []
+
+for i in range(10):
+	add = 0
+	for y in range(5):
+		num = random.randint(1,9)
+		print(num, end=" ")
+		add += num
+	print(add)
+	print()
+	total.append(add)
+
+print(total)

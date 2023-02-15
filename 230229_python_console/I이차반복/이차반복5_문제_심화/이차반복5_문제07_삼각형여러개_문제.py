@@ -10,6 +10,17 @@
 		12222
 '''
 print("[문제1]")
+max = 5
+i = 1
+for x in range(4):
+    for y in range(max-i):
+        print("1",end=" ")
+    for z in range(i):
+        print("2", end=" ")
+    i+=1
+    print()
+print()
+
 
 '''
 	[문제2]
@@ -19,6 +30,17 @@ print("[문제1]")
 		11112
 '''
 print("[문제2]")
+max = 5
+i = 1
+for x in range(4):
+    for y in range(i):
+        print("1",end=" ")
+    for z in range(max-i):
+        print("2", end=" ")
+    i+=1
+    print()
+
+print()
 
 '''
 	[문제3]
@@ -27,7 +49,19 @@ print("[문제2]")
 		22222
 '''
 print("[문제3]")
+max = 5
+i = 1
+for x in range(3):
+    for y in range((max-i)//2):
+        print("1",end=" ")
+    for z in range(i):
+        print("2", end=" ")
+    for y in range((max-i)//2):
+        print("1",end=" ")
+    i+=2
+    print()
 
+print()
 '''
 	[문제4]
 		  2
@@ -35,6 +69,18 @@ print("[문제3]")
 		22222
 '''
 print("[문제4]")
+max = 5
+i = 1
+for x in range(3):
+    for y in range((max-i)//2):
+        print(" ",end=" ")
+    for z in range(i):
+        print("2", end=" ")
+    for y in range((max-i)//2):
+        print(" ",end=" ")
+    i+=2
+    print()
+print()
 
 '''
 	[문제5]
@@ -43,3 +89,14 @@ print("[문제4]")
 		  2   
 '''
 print("[문제5]")
+max = 5
+i = 5
+for x in range(3):
+    for y in range((max-i)//2):
+        print(" ",end=" ")
+    for z in range(i):
+        print("2", end=" ")
+    for y in range((max-i)//2):
+        print(" ",end=" ")
+    i-=2
+    print()

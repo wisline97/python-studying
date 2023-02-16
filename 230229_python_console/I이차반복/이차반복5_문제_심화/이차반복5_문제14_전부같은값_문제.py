@@ -7,3 +7,20 @@
 '''
 a = [10, 20, 30, 10, 20, 30]
 b = [30, 20, 10, 20, 30, 10]
+
+
+for a_idx1 in range(len(a)):
+	count_a = 0
+	count_b = 0
+	for a_idx2 in range(len(a)):
+		if a[a_idx1] == a[a_idx2]:
+			count_a += 1
+	for b_idx in range(len(b)):
+		if b[b_idx] == a[a_idx1]:
+			count_b += 1
+	if count_a == count_b:
+		print("같음")
+		print(count_a, count_b)
+	else:
+		print("다름")
+		print(count_a, count_b)

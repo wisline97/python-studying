@@ -12,5 +12,26 @@
         
         max = 120
 '''
-total = []
+import random
 max = 0
+total = []
+
+for turn in range(5):
+    add = 0
+    print(turn+1,"번째 턴")
+    for pick_multiple in range(3):
+        print("랜덤 3의 배수 뽑기")
+        while True:
+            num = random.randint(1,50)
+            if num % 3 == 0:
+                print(pick_multiple+1,"번째 3의 배수",num)
+                break
+
+        add += num
+    print()
+    if add > max:
+        max = add
+    total.append(add)
+    print(total)
+
+print("max =",max)

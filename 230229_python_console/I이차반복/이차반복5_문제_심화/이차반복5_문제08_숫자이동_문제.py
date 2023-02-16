@@ -20,3 +20,61 @@ game = [1,1,1,1,1,
 	    1,1,1,1,1]
 
 order = [1,2,3,3,3,1,4,1]
+player_location = 0
+
+# 플레이어의 첫 위치 찾기
+for location_of_player in range(len(game)):
+    if game[location_of_player] == 8:
+        player_location = location_of_player
+
+print("현재 플레이어의 인덱스는",player_location,"입니다.")
+print()
+
+for i in range(len(order)):
+    print(i+1,"번째 턴")
+    direction = order[i]
+    
+    if direction == 1:
+        print("북으로 1칸 이동")
+        if game[player_location - 5] == 1:
+            print("이동 불가")
+        else:
+            game[player_location] = 0
+            player_location -= 5
+            game[player_location] = 8
+
+    if direction == 2:
+        print("동으로 1칸 이동")
+        if game[player_location + 1] == 1:
+            print("이동 불가")
+        else:
+            game[player_location] = 0
+            player_location += 1
+            game[player_location] = 8
+
+    if direction == 3:
+        print("남으로 1칸 이동")
+        if game[player_location + 5] == 1:
+            print("이동 불가")
+        else:
+            game[player_location] = 0
+            player_location += 5
+            game[player_location] = 8
+
+    if direction == 4:
+        print("서로 1칸 이동")
+        if game[player_location - 1] == 1:
+            print("이동 불가")
+        else:
+            game[player_location] = 0
+            player_location -= 1
+            game[player_location] = 8
+
+	# 이동경로 출력용
+    game_idx = 0
+    for rows in range(5):
+        for columns in range(5):
+            print(game[game_idx], end=" ")
+            game_idx += 1
+        print()        
+    print()

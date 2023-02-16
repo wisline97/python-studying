@@ -12,12 +12,15 @@
   		a = [40,50,10,20,30]
 	
 '''
+import random
 a = [10,20,30,40,50]
 
+r = random.randint(1,5)
+print(r)
 
+for trun in range(r):
+	temp = a[0]
+	del(a[0])
+	a.append(temp)
 
-    
-
-
-
-
+print(a)

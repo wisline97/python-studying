@@ -7,3 +7,29 @@
 '''
 a = [1,1,1,3,3,3,3,2,2,3,3,3,4,5,6,6,6]
 b = []
+
+""" 
+for a_idx in range(len(a)):
+    check = False
+    for b_idx in range(len(b)):
+        if a[a_idx] == b[b_idx]:
+            check = True
+    if not check:
+        b.append(a[a_idx])
+        
+print(b)
+ """
+
+temp = ""
+
+for a_idx in range(len(a)):
+    check = False
+    if temp == a[a_idx]:
+        check = True
+
+    if not check:
+        b.append(a[a_idx])
+	
+    temp = a[a_idx]
+
+print(b)

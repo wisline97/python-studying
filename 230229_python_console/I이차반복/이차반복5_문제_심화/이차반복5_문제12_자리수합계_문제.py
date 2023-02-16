@@ -13,3 +13,12 @@
 
 a = [132, 4354, 233, 66765]
 total = []
+
+for idx in range(len(a)):
+    a_str = str(a[idx])
+    add = 0
+    for nums in range(len(a_str)):
+        add += int(a_str[nums])
+    total.append(add)
+    
+print(total)

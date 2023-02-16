@@ -34,3 +34,37 @@
 
 vending = [7, 5, 3, 5, 3]
 box = [5, 5, 5, 5]
+idx_of_vending = 0
+idx_of_box = 0
+
+max = 10
+while True:
+    check = True
+
+    print(vending)
+    print(box)
+
+    while vending[idx_of_vending] < max:
+        need = max - vending[idx_of_vending]
+        if box[idx_of_box] == 0:
+            idx_of_box += 1
+            continue
+        if box[idx_of_box] - need < 0:
+            vending[idx_of_vending] += box[idx_of_box]
+            box[idx_of_box] = 0
+            idx_of_box += 1
+        else:
+            box[idx_of_box] -= need
+            vending[idx_of_vending] += need
+
+    idx_of_vending += 1
+
+    for box_idx_for_check in range(len(box)):
+        if box[box_idx_for_check] != 0:
+            check = False
+    print()
+    if check:
+        break
+
+print(vending)
+print(box)

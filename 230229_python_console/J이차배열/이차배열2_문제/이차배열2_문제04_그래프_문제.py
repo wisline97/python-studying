@@ -20,5 +20,9 @@ a = [
     [0,0,0,0,0,0,0,0,0,0]
 ]
 
+for turns in range(len(data)):
+    for graph_idx in range(data[turns]):
+        a[turns][graph_idx] = graph_idx+1
 
-
+for i in range(len(a)):
+    print(a[i])

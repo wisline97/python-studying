@@ -27,8 +27,14 @@ rank = [
         4400 7100 5400
 '''
 print("[문제1]")
+for first_idx_of_pay in range(len(pay)):
+    total = 0
+    for second_idx_of_pay in range(len(pay[first_idx_of_pay])):
+        total += pay[first_idx_of_pay][second_idx_of_pay]
+    print(total, end=" ")
+print()
 
-'''
+''' 
     [문제 2] 
         랜덤으로 호수와 관리비 한개 출력하시오.
     [예시 2]
@@ -36,6 +42,11 @@ print("[문제1]")
         103 1300 원 
 '''
 print("[문제2]")
+random_first_idx_of_apt = random.randint(0,2)
+random_second_idx_of_apt = random.randint(0,2)
+print(apt[random_first_idx_of_apt][random_second_idx_of_apt],"호",end=" ")
+print(pay[random_first_idx_of_apt][random_second_idx_of_apt],"원")
+
 
 '''
     [문제 3] 
@@ -45,6 +56,28 @@ print("[문제2]")
         가장 적게 나온 집 = 303    
 '''
 print("[문제3]")
+max = 0
+for first_idx_of_pay in range(len(pay)):
+    for second_idx_of_pay in range(len(pay[first_idx_of_pay])):
+        if pay[first_idx_of_pay][second_idx_of_pay] > max:
+            max = pay[first_idx_of_pay][second_idx_of_pay]
+            max_idx = [first_idx_of_pay,second_idx_of_pay]
+
+min = max
+for first_idx_of_pay in range(len(pay)):
+    for second_idx_of_pay in range(len(pay[first_idx_of_pay])):
+        if pay[first_idx_of_pay][second_idx_of_pay] < min:
+            min = pay[first_idx_of_pay][second_idx_of_pay]
+            min_idx = [first_idx_of_pay,second_idx_of_pay]
+
+print("가장 적게 나온 집")
+print(apt[min_idx[0]][min_idx[1]], "호", end=" ")
+print(min,"원")
+print()
+print("가장 많이 나온 집")
+print(apt[max_idx[0]][max_idx[1]], "호", end=" ")
+print(max,"원")
+print()
 
 '''     
     [문제 4] 
@@ -55,3 +88,25 @@ print("[문제3]")
         [2, 5, 9]
 '''
 print("[문제4]")
+
+temp = []
+rank_temp = []
+
+for y in range(len(pay)):
+    for x in range(len(pay[y])):
+        temp.append(pay[y][x])
+
+for i in range(len(temp)):
+    count = 1
+    for y in range(len(temp)):
+        if temp[i] < temp[y]:
+            count += 1
+    rank_temp.append(count)
+
+idx = 0
+for y in range(len(rank)):
+    for x in range(len(rank[y])):
+        rank[y][x] = rank_temp[idx]
+        idx+=1
+
+print(rank)

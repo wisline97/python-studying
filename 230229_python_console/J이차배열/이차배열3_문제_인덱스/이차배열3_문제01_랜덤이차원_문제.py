@@ -9,4 +9,14 @@
         [4, 4, 4, 4]
         [4, 4, 4, 4]
 '''
+import random
 a = []
+
+for turns in range(5):
+    num = random.randint(1,5)
+    print(num)
+    b = []
+    for idx in range(num):
+        b.append(num)
+    a.append(b)
+    print(a[turns])

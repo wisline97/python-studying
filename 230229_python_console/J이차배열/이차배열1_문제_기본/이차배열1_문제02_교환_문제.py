@@ -16,4 +16,25 @@
     [11, 18, 100]
     [26, 36, 39]
 '''
+import random
+
 a = [[0,0,0], [0,0,0], [0,0,0]]
+
+for first_idx_of_a in range(len(a)):
+    for second_idx_of_a in range(len(a[first_idx_of_a])):
+        num = random.randint(1,100)
+        a[first_idx_of_a][second_idx_of_a] = num
+
+print(a)
+
+first_random_idx_of_a_1 = random.randint(0,2)
+second_random_idx_of_a_1 = random.randint(0,2)
+
+first_random_idx_of_a_2 = random.randint(0,2)
+second_random_idx_of_a_2 = random.randint(0,2)
+
+temp = a[first_random_idx_of_a_1][second_random_idx_of_a_1]
+a[first_random_idx_of_a_1][second_random_idx_of_a_1] = a[first_random_idx_of_a_2][second_random_idx_of_a_2]
+a[first_random_idx_of_a_2][second_random_idx_of_a_2] = temp
+
+print(a)

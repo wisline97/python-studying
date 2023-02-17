@@ -12,6 +12,8 @@ student = [
 ]
 rank = [0,0,0,0,0]
 
+all_score = []
+
 '''
     [문제1] 
         모든 점수의 총합을 출력하시오.
@@ -19,6 +21,14 @@ rank = [0,0,0,0,0]
         665
 '''
 print("[문제1]")
+
+for y in range(len(student)):
+    total = 0
+    for x in range(len(student[y])):
+        if x != 0:
+            total += student[y][x]
+    print(student[y][0],"번 학생 점수 총합",total)
+    all_score.append(total)
 
 '''
     [문제2] 
@@ -28,6 +38,15 @@ print("[문제1]")
 '''
 print("[문제2]")
 
+max_lang = 0
+max_lang_idx = 0
+for y in range(len(student)):
+    if max_lang < student[y][1]:
+        max_lang = student[y][1]
+        max_lang_idx = y
+
+print(student[max_lang_idx][0])
+
 '''
     [문제3] 
         수학 1등 번호를 출력하시오.
@@ -35,6 +54,14 @@ print("[문제2]")
         1004    
 '''
 print("[문제3]")
+max_math = 0
+max_math_idx = 0
+for y in range(len(student)):
+    if max_math < student[y][2]:
+        max_math = student[y][2]
+        max_math_idx = y
+
+print(student[max_math_idx][0])
 
 '''        	
     [문제4] 
@@ -43,6 +70,15 @@ print("[문제3]")
         1005
 '''
 print("[문제4]")
+max_eng = 0
+max_eng_idx = 0
+for y in range(len(student)):
+    if max_eng < student[y][3]:
+        max_eng = student[y][3]
+        max_eng_idx = y
+
+print(student[max_eng_idx][0])
+
 
 '''
     [문제5] 
@@ -50,6 +86,16 @@ print("[문제4]")
     [정답5]
 '''
 print("[문제5]")
+
+max_score = 0
+max_score_idx = 0
+
+for idx in range(len(all_score)):
+    if max_score < all_score[idx]:
+        max_score = all_score[idx]
+        max_score_idx = idx
+
+print(student[max_score_idx][0],"번 학생 점수 총합 =",max_score)
 
 '''
     [문제6] 
@@ -59,6 +105,10 @@ print("[문제5]")
 '''
 print("[문제6]")
 
+for i in range(len(student)):
+    if student[i][2] > student[i][1]:
+        print(student[i][0])
+
 '''
     [문제7]
         세 과목의 총합의 등수를 rank리스트에 저장하시오.
@@ -67,7 +117,12 @@ print("[문제6]")
 '''
 print("[문제7]")
 
-            
-            
+for idx in range(len(all_score)):
+    count = 0
+    for i in range(len(all_score)):
+        if all_score[idx] <= all_score[i]:
+            count += 1
+    rank[idx] = count
 
+print(rank)
 

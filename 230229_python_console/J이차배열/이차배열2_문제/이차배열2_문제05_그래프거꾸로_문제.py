@@ -22,3 +22,9 @@ a = [
     [0,0,0,0,0,0,0,0,0,0]
 ]
 
+for turns in range(len(data)):
+    for graph_idx in reversed(range(10-data[turns],10)):
+        a[turns][graph_idx] = 10-graph_idx
+
+for i in range(len(a)):
+    print(a[i])

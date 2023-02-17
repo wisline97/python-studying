@@ -33,3 +33,48 @@ game = [
     [2,1]
 ]
 pos = 0
+
+# 가위(0), 바위(1), 보(2)
+
+for game_turns in range(len(game)):
+    chulsu = game[game_turns][0]
+    minsu = game[game_turns][1]
+    print("chulsu",chulsu, "minsu",minsu)
+    if chulsu == minsu:
+        print("철수와 민수는 비겼다!")
+        pos += 1
+    
+    if chulsu == 1 and minsu == 0:
+        print("철수가 이겼다!")
+        pos += 3
+
+    if chulsu == 1 and minsu == 2:
+        print("철수가 졌다!")
+        if pos - 3 < 0:
+            pos = 0
+        else:
+            pos -= 3
+
+    if chulsu == 2 and minsu == 0:
+        print("철수가 졌다!")
+        if pos - 3 < 0:
+            pos = 0
+        else:
+            pos -= 3
+
+    if chulsu == 2 and minsu == 1:
+        print("철수가 이겼다!")
+        pos += 3
+
+    if chulsu == 0 and minsu == 1:
+        print("철수가 졌다!")
+        if pos - 3 < 0:
+            pos = 0
+        else:
+            pos -= 3
+
+    if chulsu == 0 and minsu == 2:
+        print("철수가 이겼다!")
+        pos += 3
+
+print(pos)

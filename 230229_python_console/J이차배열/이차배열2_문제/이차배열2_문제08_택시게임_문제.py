@@ -21,5 +21,23 @@ game = [
     [4,2],
     [2,1]
 ]
+
+# 0, 1, 2, 3은 북, 동, 남, 서
+
 x = 5
 y = 5
+
+for turns in range(len(game)):
+    if game[turns][1] == 0:
+        y += game[turns][0]
+
+    if game[turns][1] == 1:
+        x += game[turns][0]
+    
+    if game[turns][1] == 2:
+        y -= game[turns][0]
+    
+    if game[turns][1] == 3:
+        x -= game[turns][0]
+
+print("x = ",x,", y = ", y)

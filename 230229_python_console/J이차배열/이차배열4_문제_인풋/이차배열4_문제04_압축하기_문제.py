@@ -16,5 +16,22 @@
         [4, 1]
         [2, 2]
 '''
-a = [3,3,3,3,3,5,5,5,5,5,5,2,4,2,2]
+a = [3,3,3,3,3,5,5,5,5,5,5,2,4,2,2,2,3,3,5]
 b = []
+cnt = 1
+for a_idx in range(len(a)-1):
+    if a[a_idx] == a[a_idx+1]:
+        if a_idx == len(a)-2:
+            cnt += 1
+            b.append([a[a_idx], cnt])
+        else:
+            cnt += 1
+    else:
+        b.append([a[a_idx], cnt])
+        cnt = 1
+
+last = len(a) - 1
+if a[last] != a[last-1]:
+    b.append([a[last], cnt])
+
+print(b)

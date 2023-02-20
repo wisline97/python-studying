@@ -23,5 +23,62 @@
 		258
 		167
 '''
+import random
+
+# num = random.randint(1,4)
+num = 4
 snake = []
 
+for i in range(3):
+    snake.append([0,0,0])
+
+if num == 1:
+    number = 1
+    for y in range(len(snake)):
+        if y % 2 == 0:
+            for x in range(len(snake[y])):
+                snake[y][x] = number
+                number += 1
+        else:
+            for x in reversed(range(len(snake[y]))):
+                snake[y][x] = number
+                number += 1
+
+elif num == 2:
+    number = 1
+    for x in reversed(range(len(snake))):
+        if x % 2 == 0:
+            for y in range(len(snake)):
+                snake[y][x] = number
+                number += 1
+        else:
+            for y in reversed(range(len(snake))):
+                snake[y][x] = number
+                number += 1
+
+elif num == 3:
+    number = 1
+    for y in reversed(range(len(snake))):
+        if y % 2 == 0:
+            for x in reversed(range(len(snake[y]))):
+                snake[y][x] = number
+                number += 1
+        else:
+            for x in range(len(snake[y])):
+                snake[y][x] = number
+                number += 1
+
+elif num == 4:
+    number = 1
+    for x in range(len(snake)):
+        if x % 2 == 0:
+            for y in reversed(range(len(snake))):
+                snake[y][x] = number
+                number += 1
+        else:
+            for y in range(len(snake)):
+                snake[y][x] = number
+                number += 1
+
+for i in range(len(snake)):
+    print(snake[i])

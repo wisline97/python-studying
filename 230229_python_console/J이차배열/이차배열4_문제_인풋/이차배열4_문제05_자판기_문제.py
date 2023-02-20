@@ -64,7 +64,7 @@ vending = [
     [0,2,3,0,5,6],
     [1,2,3,0,5,6],
     [1,2,3,4,5,6],
-    [1,2,3,4,5,6],
+    [1,2,3,4,5,6],   
     [1,2,3,4,5,6],
 ]
 box = [
@@ -75,3 +75,44 @@ box = [
     [5,8],
     [6,9],
 ]
+
+vending_full_ivnt = len(vending) - 1
+for turns in range(len(box)):
+    box_item_no = box[turns][0]
+    box_item_cnt = box[turns][1]
+    print(turns+1,"횟수")
+    print(box_item_cnt,"재고개수")
+
+    # 아이템을 어디서부터 채울건지 확인하기 위해 현재 위치를 구함
+    full_check = True
+
+    for y_idx_vending in reversed(range(len(vending))):
+        if vending[y_idx_vending][turns] == 0:
+            location = y_idx_vending
+            full_check = False
+            print(location,"여기서부터 채워야함")
+            break
+
+    for draw in range(len(vending)):
+        print(vending[draw])
+    print()
+
+    # 이미 꽉 채워져있으면 바로 다음 턴으로 넘어감
+    if full_check:
+        continue
+
+    if (vending_full_ivnt-location)+box_item_cnt <= 10:
+        for fill_ivnt in range(box_item_cnt):
+            vending[location][turns] = box_item_no
+            box[turns][1] -= 1
+            location -= 1
+
+    else:
+        for fill_ivnt in range(10-(vending_full_ivnt-location)):
+            vending[location][turns] = box_item_no
+            box[turns][1] -= 1
+            location -= 1
+
+for draw in range(len(vending)):
+    print(vending[draw])
+print(box)

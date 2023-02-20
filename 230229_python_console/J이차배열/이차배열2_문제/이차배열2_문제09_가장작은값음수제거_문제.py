@@ -12,8 +12,16 @@
     
         가장 작은 값 = 2
 '''
+import random
+
 a = []
 
+for nums in range(3):
+    num1 = random.randint(-100,100)
+    num2 = random.randint(-100,100)
+    num3 = random.randint(-100,100)
+    a.append([num1,num2,num3])
 
-    
+print(a)
+print(abs(min(min(a))))
 

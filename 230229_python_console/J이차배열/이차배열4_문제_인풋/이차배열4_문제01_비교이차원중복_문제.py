@@ -18,3 +18,14 @@
 
 a = [[1,4,3],[5,7,2],[5,4,1]]
 b = [[5,3,2],[1,7,8],[6,5,1]]
+
+for a_y_idx in range(len(a)):
+    for a_x_idx in range(len(a)):
+        for b_y_idx in range(len(b)):
+            for b_x_idx in range(len(b)):
+                if a[a_y_idx][a_x_idx] == b[b_y_idx][b_x_idx]:
+                    a[a_y_idx][a_x_idx] = 0
+                    b[b_y_idx][b_x_idx] = 0
+
+print(a)
+print(b)

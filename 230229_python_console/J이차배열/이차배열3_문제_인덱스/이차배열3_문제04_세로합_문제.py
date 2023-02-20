@@ -15,5 +15,13 @@ a = [
 ]
 
 total = []
+a_x_idx = 0
+for turns in range(5):
+    x_total = 0
+    for idx in range(len(a)):
+        x_total += a[idx][a_x_idx]
+    a_x_idx += 1
 
-	
+    total.append(x_total)
+
+print(total)

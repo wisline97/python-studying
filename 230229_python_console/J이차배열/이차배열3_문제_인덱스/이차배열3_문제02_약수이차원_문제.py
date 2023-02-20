@@ -9,5 +9,18 @@
         94 [1, 2, 47, 94]
         91 [1, 7, 13, 91]  
 '''
+import random
+
 a = []
 
+for turns in range(5):
+    num = random.randint(2,100)
+    print(num)
+    temp = []
+    for nums in range(1,num+1):
+        if num % nums == 0:
+            temp.append(nums)
+    print(temp)
+    a.append(temp)
+
+print(a)

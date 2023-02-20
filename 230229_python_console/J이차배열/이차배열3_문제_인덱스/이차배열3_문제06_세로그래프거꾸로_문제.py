@@ -27,4 +27,13 @@ graph = [
     [0,0,0,0,0,0],
     [0,0,0,0,0,0],
 ]
-	
+
+graph_x_idx = 0
+
+for turns in range(len(data)):
+    for fill in reversed(range(len(graph)-data[turns],len(graph))):
+        graph[fill][graph_x_idx] = 1
+    graph_x_idx += 1
+
+for i in range(len(graph)):
+    print(graph[i])

@@ -38,3 +38,11 @@ count = [
     [1003,0,0],
     [1004,0,0],
     [1005,0,0]]
+
+for order_y_idx in range(len(order)):
+        for info_y_idx in range(len(info)):
+                if order[order_y_idx][0] == info[info_y_idx][0]:
+                        count[info_y_idx][1] += order[order_y_idx][1]
+                        count[info_y_idx][2] += order[order_y_idx][1]*info[info_y_idx][1]
+
+print(count)

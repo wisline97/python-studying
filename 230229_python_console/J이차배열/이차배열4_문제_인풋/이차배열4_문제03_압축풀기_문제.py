@@ -15,3 +15,9 @@ a = [
     [4,3],
 ]
 b = []
+
+for a_y_idx in range(len(a)):
+    for repeat in range(a[a_y_idx][1]):
+        b.append(a[a_y_idx][0])
+
+print(b)

@@ -23,3 +23,13 @@ a = [
 ]
 
 b = []
+
+for turns in range(3):
+    a_x_idx = 0
+    temp = []
+    for a_idx in range(len(a)):
+        temp.append(a[turns][a_x_idx] + a[turns][a_x_idx+1])
+        a_x_idx += 2
+    b.append(temp)
+
+print(b)

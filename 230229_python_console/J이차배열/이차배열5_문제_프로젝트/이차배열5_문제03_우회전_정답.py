@@ -45,12 +45,7 @@ for i in range(rNum):
         for k in range(3):
             temp2.append(block[j][k])
         temp1.append(temp2)
-    
+
     for j in range(3):
         for k in range(3):
             block[k][2-j] = temp1[j][k]
-
-
-
-
-

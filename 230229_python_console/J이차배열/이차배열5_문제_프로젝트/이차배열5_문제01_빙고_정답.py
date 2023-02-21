@@ -18,7 +18,6 @@ bingo = [
 mark = 0
 
 while True:
-
     for i in range(3):
         for j in range(3):
             print(bingo[i][j], end=" ")

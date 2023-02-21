@@ -93,4 +93,51 @@ game = [
     [0,0,0,0,0],
 ]
 
+player_location = [2,2]
+
 order = [1,3,3,3,4,3,3,4,2]
+
+player_location_y = player_location[0]
+player_location_x = player_location[1]
+
+y_limit = len(game) - 1
+x_limit = len(game[0]) - 1
+
+# 1,2,3,4는 차례대로 북, 동, 남, 서
+for turns in range(len(order)):
+    print(player_location_y, player_location_x)
+    game[player_location_y][player_location_x] = 0
+
+    if order[turns] == 1:
+        if player_location_y - 1 >= 0:
+            player_location_y -= 1
+        else:
+            print("이동불가")
+            continue
+    elif order[turns] == 2:
+        if player_location_x + 1 <= x_limit:
+            player_location_x += 1
+        else:
+            print("이동불가")
+            continue
+    elif order[turns] == 3:
+        if player_location_y + 1 <= y_limit:
+            player_location_y += 1
+        else:
+            print("이동불가")
+            continue
+    else:
+        if player_location_x - 1 >= 0:
+            player_location_x -= 1
+        else:
+            print("이동불가")
+            continue
+
+    game[player_location_y][player_location_x] = 8
+    print(player_location_y, player_location_x)
+    for i in range(len(game)):
+        print(game[i])
+    print()
+
+player_location[0] = player_location_y
+player_location[1] = player_location_x

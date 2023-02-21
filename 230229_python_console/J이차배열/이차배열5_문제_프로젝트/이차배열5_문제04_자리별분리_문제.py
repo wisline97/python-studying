@@ -13,3 +13,21 @@
 		345 + 67
 		3456 + 7
 '''
+import random
+
+random_number = str(random.randint(10000,99999))
+print("랜덤숫자는 :",random_number)
+front_nums = ""
+total = []
+for turns1 in range(len(random_number)-1):
+	back_nums = ""
+	front_nums += random_number[turns1]
+	
+	for turns2 in range(turns1+1, len(random_number)):
+		back_nums += random_number[turns2]
+
+	total_unit = int(front_nums) + int(back_nums)
+	print(front_nums,"+", back_nums,"=",total_unit)
+	total.append(total_unit)
+
+print(total)

@@ -130,5 +130,4 @@ while True:
 				pY = i
 				pX = j
 				break
-	
 

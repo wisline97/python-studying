@@ -9,3 +9,13 @@ regist = ["김철민" ,"이민정" , "오사랑" , "최면술" , "김밥집" , "
 cancle = ["이민정" , "최면술" , "조정민"]
 
 last_regist = []
+
+for regist_idx in range(len(regist)):
+    check = False
+    for cancle_idx in range(len(cancle)):
+        if regist[regist_idx] == cancle[cancle_idx]:
+            check = True
+    if not check:
+        last_regist.append(regist[regist_idx])
+
+print(last_regist)

@@ -32,11 +32,11 @@ block = [
 random_number = random.randint(1,4)
 print(random_number)
 
-for turns in range(random_number):
-    for x in range(3):
+for x in range(3):
         print(block[x])
-    print()
+print()
 
+for turns in range(random_number):
     temp = []
 
     for block_x in range(3):
@@ -48,3 +48,7 @@ for turns in range(random_number):
     for block_y in range(3):
         for block_x in range(3):
             block[block_y][block_x] = temp[block_y][block_x]
+    
+    for x in range(3):
+        print(block[x])
+    print()

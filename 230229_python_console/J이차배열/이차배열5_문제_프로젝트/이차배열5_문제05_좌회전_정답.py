@@ -28,7 +28,7 @@ block = [
     [7, 8, 9]
 ]
 
-rNum = random.randint(1, 4)
+rNum = 1
 print("rNum =", rNum)
 
 for i in range(rNum):

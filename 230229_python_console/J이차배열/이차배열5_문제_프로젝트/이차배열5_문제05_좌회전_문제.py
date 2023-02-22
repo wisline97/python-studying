@@ -9,7 +9,7 @@
         7 8 9 
 
         3 6 9 
-        2 5 8 
+        2 5 8  
         1 4 7 
 
         9 8 7 
@@ -20,8 +20,37 @@
         8 5 2 
         9 6 3 
 '''
+import random
+
 block = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
 ]
+
+random_number = random.randint(1,4)
+print(random_number)
+
+for x in range(3):
+        print(block[x])
+print()
+
+
+
+
+for turns in range(random_number):
+    temp = []
+
+    for block_x in reversed(range(3)):
+        temp_element = []
+        for block_y in range(3):
+            temp_element.append(block[block_y][block_x])
+        temp.append(temp_element)
+
+    for block_y in range(3):
+        for block_x in range(3):
+            block[block_y][block_x] = temp[block_y][block_x]
+
+    for x in range(3):
+        print(block[x])
+    print()

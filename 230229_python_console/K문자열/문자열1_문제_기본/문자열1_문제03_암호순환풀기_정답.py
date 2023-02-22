@@ -18,5 +18,3 @@ for i in range(3):
         temp += password[j]
     password = temp
 print(password)
-
-

@@ -11,4 +11,10 @@
 '''
 password = "r1234qwe"
 
-
+for turns in range(3):
+    temp = ""
+    temp += password[len(password)-1]
+    for idx in range(len(password)-1):
+        temp += password[idx]
+    password = temp
+    print(password)

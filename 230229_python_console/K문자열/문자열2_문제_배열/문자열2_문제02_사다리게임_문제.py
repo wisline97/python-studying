@@ -12,8 +12,9 @@
 		r = 3, 짜장면
 		r = 4, 쫄면
 '''
+import random
 menu = ["떡라면", "돈까스","짜장면", "쫄면", "된장찌개"]
-
+r = random.randint(0,4)
 ladder= [
 		[0,0,0,0,0],
 		[1,2,0,1,2],
@@ -25,3 +26,14 @@ ladder= [
 		[0,0,1,2,0],
 		[0,0,0,0,0]
 	]
+print(r)
+ladder_x = r
+ladder_y = 0
+while ladder_y < len(ladder)-1:
+	if ladder[ladder_y][ladder_x] == 1:
+		ladder_x += 1
+	elif ladder[ladder_y][ladder_x] == 2:
+		ladder_x -= 1
+	ladder_y += 1
+answer = menu[ladder_x]
+print(answer)

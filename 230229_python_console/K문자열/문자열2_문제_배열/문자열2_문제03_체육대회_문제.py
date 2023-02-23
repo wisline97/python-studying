@@ -20,3 +20,27 @@
 	    ]
 
 c = []
+
+for y_idx in range(len(달리기)):
+	for x_idx in range(len(달리기[y_idx])):
+
+		check = False
+		for 배구_y_idx in range(len(배구)):
+			for 배구_x_idx in range(len(배구[배구_y_idx])):
+				if 달리기[y_idx][x_idx] == 배구[배구_y_idx][배구_x_idx]:
+					check = True
+
+		if not check:
+			c.append(달리기[y_idx][x_idx])
+
+		check = False
+		for 달리기_y_idx in range(len(달리기)):
+			for 달리기_x_idx in range(len(달리기[달리기_y_idx])):
+				if 배구[y_idx][x_idx] == 달리기[달리기_y_idx][달리기_x_idx]:
+					check = True
+
+		if not check:
+			c.append(배구[y_idx][x_idx])
+
+
+print(c)

@@ -11,4 +11,16 @@
         n*de
         *avascript
 '''
+import random
 wordList = ["java", "python", "c++", "node", "javascript"]
+
+for idx in range(len(wordList)):
+    num = random.randint(0,len(wordList[idx])-1)
+    print("랜덤숫자는", num)
+    temp = ""
+    for str_idx in range(len(wordList[idx])):
+        if str_idx == num:
+            temp += "*"
+        else:
+            temp += wordList[idx][str_idx]
+    print(temp)

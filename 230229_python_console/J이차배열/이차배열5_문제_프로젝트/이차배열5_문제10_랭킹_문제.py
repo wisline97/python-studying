@@ -25,3 +25,40 @@ score = [
 			[1004, 76, 63,  4, 0]
 		]
 
+rank = []
+
+for score_y_idx1 in range(len(score)):
+	temp = []
+	total = 0
+	count = 0
+	for score_y_idx2 in range(len(score)):
+		if score[score_y_idx1][1] <= score[score_y_idx2][1]:
+			count += 1
+	temp.append(count)
+	total += count
+
+	count = 0
+	for score_y_idx2 in range(len(score)):
+		if score[score_y_idx1][2] <= score[score_y_idx2][2]:
+			count += 1
+	temp.append(count)
+	total += count
+
+	count = 0
+	for score_y_idx2 in range(len(score)):
+		if score[score_y_idx1][3] <= score[score_y_idx2][3]:
+			count += 1
+	temp.append(count)
+	total += count
+
+	temp.append(total)
+	rank.append(temp)
+
+for rank_y_idx1 in range(len(rank)):
+	count = 1
+	for rank_y_idx2 in range(len(rank)):
+		if rank[rank_y_idx1][3] > rank[rank_y_idx2][3]:
+			count += 1
+	score[rank_y_idx1][4] = count
+
+print(score)

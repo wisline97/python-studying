@@ -6,4 +6,18 @@
         당첨
 '''
 
-lotto = [1, 7, 7, 1, 7, 7, 7]
+lotto = [1, 7, 1, 7, 7, 7, 7]
+
+def lotto_win_check(lotto):
+    for idx in range(len(lotto)-2):
+        cnt = 0
+        for count in range(3):
+            if lotto[idx+count] == 7:
+                cnt += 1
+        if cnt == 3:
+            print("당첨입니다.")
+            break
+    if cnt != 3:
+        print("꽝!")
+
+lotto_win_check(lotto)

@@ -11,5 +11,18 @@
 
 
 a =["school", "teacher", "child","father", "love"]
-
+answer = []
 search = "ch"
+for a_idx in range(len(a)):
+    check = False
+    for word_idx in range(len(a[a_idx])-1):
+        count = 0
+        for search_idx in range(len(search)):
+            if a[a_idx][word_idx+search_idx] == search[search_idx]:
+                count += 1
+            else:
+                count = 0
+        if count == 2:
+            answer.append(a[a_idx])
+
+print(answer)

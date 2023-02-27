@@ -10,5 +10,35 @@
        r = 3
        3은 / 이므로 10 / 3 
 '''
+import random
+
 x = 10
 y = 3
+
+def plus(x,y):
+    answer = x + y
+    print(answer)
+
+def minus(x,y):
+    answer = x - y
+    print(answer)
+
+def multi(x,y):
+    answer = x * y
+    print(answer)
+
+def divide(x,y):
+    answer = x / y
+    print(answer)
+
+for turns in range(5):
+    num = random.randint(0,3)
+    print("랜덤숫자는",num)
+    if num == 0:
+        plus(x,y)
+    elif num == 1:
+        minus(x,y)
+    elif num == 2:
+        multi(x,y)
+    elif num == 3:
+        divide(x,y)

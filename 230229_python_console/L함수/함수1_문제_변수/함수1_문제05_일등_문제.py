@@ -9,4 +9,13 @@
 name = ["이만수", "김철수", "박민지"]  
 score = [54, 32, 92]
 
-   
+def get_first_score(score):
+    max = 0
+    max_idx = 0
+    for idx in range(len(score)):
+        if max < score[idx]:
+            max = score[idx]
+            max_idx = idx
+    print("1등학생",name[max_idx])
+
+get_first_score(score)

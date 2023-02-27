@@ -12,7 +12,7 @@
 
 a =["school", "teacher", "child","father", "love"]
 
-search = "ch"
+search = "ool"
 
 i = 0
 while i < len(a):

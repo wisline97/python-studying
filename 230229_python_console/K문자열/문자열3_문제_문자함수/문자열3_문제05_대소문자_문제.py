@@ -12,3 +12,8 @@ logId = "q1w2e3R4"
 str0 = "0123456789"
 str1 = "abcdefghijklmnopqrstuvwxyz"
 str2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+if dbId.upper() == logId.upper():
+    print("일치합니다.")
+else:
+    print("일치하지 않습니다")

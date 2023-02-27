@@ -9,3 +9,15 @@
 
 arr = [10, 0, 2, 6]
 
+def all_even_check(arr):
+    check = True
+    for idx in range(len(arr)):
+        if arr[idx] % 2 != 0:
+            check = False
+            break
+    if check:
+        print("True")
+    else:
+        print("False")
+        
+all_even_check(arr)

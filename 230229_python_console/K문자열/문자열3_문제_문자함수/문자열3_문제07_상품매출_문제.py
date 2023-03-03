@@ -13,3 +13,27 @@
 member = "qwer1234,pythongood,testid"
 item = "사과,1100/바나나,2000/딸기,4300"
 order = "qwer1234,사과,3/phthongood,바나나,2/qwer1234,딸기,5/testid,사과,4"
+
+item = item.split("/")
+order = order.split("/")
+
+for idx in range(len(item)):
+    item[idx] = item[idx].split(",")
+
+for idx in range(len(order)):
+    order[idx] = order[idx].split(",")
+
+print(item)
+print(order)
+
+today_total = 0
+
+for order_cnt in range(len(order)):
+    if order[order_cnt][1] == "사과":
+        today_total += int(item[0][1]) * int(order[order_cnt][2])
+    if order[order_cnt][1] == "바나나":
+        today_total += int(item[1][1]) * int(order[order_cnt][2])
+    if order[order_cnt][1] == "딸기":
+        today_total += int(item[2][1]) * int(order[order_cnt][2])
+
+print(today_total)

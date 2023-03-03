@@ -19,5 +19,20 @@
 speed = [4, 2, 1, 5, 4, 2]
 dir = [0, 1, 3, 2, 2, 1]
 
-x = 5
-y = 5
+def taxi(dir):
+	x = 5
+	y = 5
+
+	# 0, 1, 2, 3은 북, 동, 남, 서
+	for dir_idx in range(len(dir)):
+		if dir[dir_idx] == 0:
+			y += speed[dir_idx]
+		elif dir[dir_idx] == 1:
+			x += speed[dir_idx]
+		elif dir[dir_idx] == 2:
+			y -= speed[dir_idx]
+		elif dir[dir_idx] == 3:
+			x -= speed[dir_idx]
+	print(x,y)
+
+taxi(dir)

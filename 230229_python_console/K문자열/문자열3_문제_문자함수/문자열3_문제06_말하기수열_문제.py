@@ -13,3 +13,20 @@
 '''
 
 a = "1"
+
+for turns in range(5):
+	temp = a
+	a = ""
+	count = 1
+
+	for idx in range(len(temp)-1):
+		if temp[idx] == temp[idx+1]:
+			count += 1
+		else:
+			a += temp[idx]
+			a += str(count)
+			count = 1
+	a += temp[len(temp) - 1]
+	a += str(count)
+	print("temp:",temp)
+	print("a:",a)

@@ -26,3 +26,16 @@ pointList = [
   {"userno" : 1003 , "point" : 2},
   {"userno" : 1003 , "point" : 1},
 ]
+
+max = 0
+name = ""
+for i in range(len(userList)):
+  total = 0
+  for j in range(len(pointList)):
+    if userList[i]["userno"] == pointList[j]["userno"]:
+      total += pointList[j]["point"]
+  if total > max:
+    max = total
+    name = userList[i]["username"]
+
+print(max , " " , name)

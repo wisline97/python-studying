@@ -11,6 +11,6 @@ print(test1)
 test2 = a.find("z") # -1
 print(test2)
 
-
-
-
+b = "지선이55"
+test3 = b.find("55")
+print(test3)

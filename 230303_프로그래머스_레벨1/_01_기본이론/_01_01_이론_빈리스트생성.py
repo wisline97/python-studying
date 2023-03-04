@@ -4,8 +4,5 @@
 test = [0 for i in range(5)]
 print(test)
 
-
-
-
-
-
+a = [ 0 for i in range(5)]
+print(a)

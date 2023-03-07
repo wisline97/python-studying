@@ -88,18 +88,3 @@ for i in range(len(itemList)):
 
 for i in range(len(totalList)):
     print(totalList[i])
-
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
